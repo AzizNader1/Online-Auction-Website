@@ -1,0 +1,396 @@
+﻿@model ZadProject.Models.RealStateAuction
+
+@{
+    ViewData["Title"] = "UploadRealStateAuction";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .card-hover:hover {
+            border-color: #0D6EFD;
+            box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .form-error {
+            color: red;
+            font-size: 0.875rem;
+        }
+
+            .form-error input {
+                border-color: red;
+            }
+
+        .transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .gogo {
+            display: block;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 40px;
+            margin-bottom: 20px;
+            border-top: 3px solid #010912;
+            border-bottom: 3px solid #010912;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <a href="/Home/HomePage" class="navbar-brand d-flex align-items-center text-center">
+                    <div>
+                        <img class="img-fluid" src="/img/pngwing.com.png" alt="" style="width: 70px; height: 70px;">
+                    </div>
+                    <pre> </pre>
+
+                    <h1 class="	--bs-primary-bg-subtle ">ZAD</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="/Home/HomePage" class="nav-item nav-link active">Home</a>
+                        <div class="nav-item dropdown">
+                            <a href="/Users/GetAllAuctions" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Auctions</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="/Users/GetAllRealStateAuctions" class="dropdown-item">Real Estate</a>
+                                <a href="/Users/GetAllCarsAuctions" class="dropdown-item">Vehicles</a>
+                                <a href="/Users/GetAllOtherAuctions" class="dropdown-item">Others</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="/Users/UploadAuction" class="dropdown-item">Upload Auctions</a>
+                            </div>
+                        </div>
+                        <a href="/Home/HowItWork" class="nav-item nav-link">H.I.W</a>
+
+                        <a href="/Home/AboutUs" class="nav-item nav-link">About US</a>
+                    </div>
+                    @if (TempData["UserId"] != null)
+                    {
+                        <a href="/Users/UserDashboard/@TempData["UserId"]" class="btn btn-secondary --bs-primary-bg-subtle text-bg-primary p-2 px-3 d-none d-lg-flex">User Profile</a>
+                    }
+                    else
+                    {
+                        <a href="/Home/Login" class="btn btn-secondary --bs-primary-bg-subtle text-bg-primary p-2 px-3 d-none d-lg-flex">Login</a>
+
+                    }
+                    <!-- <div class="text-bg-primary p-3">Primary with contrasting color</div> -->
+
+
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <div class="container mx-auto py-8">
+            @if (TempData["UploadMessageError"] != null)
+            {
+                <div class="alert alert-danger align-content-center" role="alert">
+                    <p style="display:flex;justify-content:center;font-size:25px;">@TempData["UploadMessageError"]</p>
+                </div>
+            }
+            <div class="nav-buttons">
+                <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-transparent card-hover transition duration-300 cursor-pointer" onclick="location.href='/Users/UploadAuction'">
+                    <h2 class="text-2xl font-semibold mb-4">Home</h2>
+                    <p class="mb-4">Return to the homepage and view all categories.</p>
+                    <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Select</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-transparent card-hover transition duration-300 cursor-pointer" onclick="location.href='/Users/UploadCarAuction'">
+                    <h2 class="text-2xl font-semibold mb-4">Car</h2>
+                    <p class="mb-4">Auction your car to get the best value.</p>
+                    <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Select</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-transparent card-hover transition duration-300 cursor-pointer" onclick="location.href='/Users/UploadOtherAuction'">
+                    <h2 class="text-2xl font-semibold mb-4">Other</h2>
+                    <p class="mb-4">Auction other items for great deals.</p>
+                    <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Select</button>
+                </div>
+            </div>
+
+
+            <form asp-action="UploadRealStateAuction" enctype="multipart/form-data" id="house-form" class="form-container">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-4">
+                    <label for="house-size" class="block text-sm font-medium text-gray-700">House Size (in square meters)</label>
+                    <input asp-for="HouseSize" min="1" required name="HouseSize" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the house size in square meters" required pattern="\d+" />
+                    <span asp-validation-for="HouseSize" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="house-location" class="block text-sm font-medium text-gray-700">House Location (Address)</label>
+                    <input asp-for="HouseAddress" required name="HouseAddress" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the house address" required />
+                    <span asp-validation-for="HouseAddress" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="number-rooms" class="block text-sm font-medium text-gray-700">Number of Rooms</label>
+                    <select asp-for="NumberOfRooms" required name="NumberOfRooms" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" asp-items="@Html.GetEnumSelectList(typeof(NumberOfRooms))">
+                        <option value="">--select your value--</option>
+                    </select>
+                    <span asp-validation-for="NumberOfRooms" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="number-bathrooms" class="block text-sm font-medium text-gray-700">Number of Bathrooms</label>
+                    <select asp-for="NumberOfBathrooms" required name="NumberOfBathrooms" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" asp-items="@Html.GetEnumSelectList(typeof(NumberOfBathrooms))">
+                        <option value="">--select your value--</option>
+                    </select>
+                    <span asp-validation-for="NumberOfBathrooms" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="year-built" class="block text-sm font-medium text-gray-700">Year Built</label>
+                    <select asp-for="YearOfBuild" required name="YearOfBuild" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the year built" required asp-items="@Html.GetEnumSelectList(typeof(YearOfBuild))">
+                        <option value="">--select your value--</option>
+                    </select>
+                    <span asp-validation-for="YearOfBuild" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="type-property" class="block text-sm font-medium text-gray-700">Type of Property</label>
+                    <select asp-for="TypeOfProperty" required name="TypeOfProperty" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" asp-items="@Html.GetEnumSelectList(typeof(TypeOfProperty))">
+                        <option value="">--select your value--</option>
+                    </select>
+                    <span asp-validation-for="TypeOfProperty" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="house-condition" class="block text-sm font-medium text-gray-700">Condition</label>
+                    <select asp-for="Condition" required name="Condition" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" asp-items="@Html.GetEnumSelectList(typeof(Condition))">
+                        <option value="">--select your value--</option>
+                    </select>
+                    <span asp-validation-for="Condition" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700">Parking</label>
+                    <select asp-for="Parking" required name="Parking" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" asp-items="@Html.GetEnumSelectList(typeof(Parking))">
+                        <option value="">--select your value--</option>
+                    </select>
+                    <span asp-validation-for="Parking" class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label for="number-floors" class="block text-sm font-medium text-gray-700">Number of Floors</label>
+                    <input type="number" min="1" required name="NumberOfFloors" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the number of floors" required pattern="\d+">
+                    <span asp-validation-for="NumberOfFloors" class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label for="video-link" class="block text-sm font-medium text-gray-700">Video Link</label>
+                    <input type="text" required name="VideoLink" id="video-link" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the video link">
+                    <span asp-validation-for="VideoLink" class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label for="starting-price" class="block text-sm font-medium text-gray-700">Starting Price</label>
+                    <input type="number" min="1" required id="starting-price" name="StartingPrice" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the starting price" required pattern="\d+" />
+                    <span asp-validation-for="StartingPrice" class="text-danger"></span>
+                </div>
+                @*  <div class="mb-4">
+                <label for="starting-price" class="block text-sm font-medium text-gray-700">Minimun Sale Price</label>
+                <input type="number" id="starting-price" name="MinimunSalePrice" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the minimun sale price" required pattern="\d+" />
+                <span asp-validation-for="MinimunSalePrice" class="text-danger"></span>
+                </div> *@
+                <div class="mb-4">
+                    <label for="car-image-upload" class="block text-sm font-medium text-gray-700">Upload Images</label>
+                    <input type="file" required name="AuctionImage" id="car-image-upload" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                    <span asp-validation-for="AuctionImage" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="starting-price" class="block text-sm font-medium text-gray-700">Auction Start Date</label>
+                    <input type="datetime-local" id="AuctionStartDate" required name="AuctionStartDate" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                    <span asp-validation-for="AuctionStartDate" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="starting-price" class="block text-sm font-medium text-gray-700">Auction End Date</label>
+                    <input type="datetime-local" id="AuctionEndDate" required name="AuctionEndDate" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                    <span asp-validation-for="AuctionEndDate" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="starting-price" class="block text-sm font-medium text-gray-700">Owner Name</label>
+                    <input asp-for="OwnerName" readonly value="@ViewBag.UserName" required name="OwnerName" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                    <span asp-validation-for="OwnerName" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="starting-price"  class="block text-sm font-medium text-gray-700">Owner Phone</label>
+                    <input type="text" readonly value="@ViewBag.UserPhone" placeholder="type your phone" required pattern="^01[0125][0-9]{8}$" title="Please enter a valid Egyptian phone number (e.g., 01012345678)" name="OwnerPhone" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                    <span asp-validation-for="OwnerPhone" class="text-danger"></span>
+                </div>
+                <div class="form-group" hidden>
+                    <label asp-for="AuctionStatus" class="control-label"></label>
+                    <select asp-for="AuctionStatus" name="AuctionStatus" asp-items="@Html.GetEnumSelectList(typeof(Status))">
+                        <option value="Pending"></option>
+                    </select>
+                    <span asp-validation-for="AuctionStatus" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">Submit</button>
+                </div>
+            </form>
+        </div>
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="/Home/AboutUs">About Us</a>
+                        <a class="btn btn-link text-white-50" href="/Home/AboutUs">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Photo Gallery</h5>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="/Home/HomePage">MAZAD</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">Mazad Team</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="/Home/HomePage">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="/Home/HomePage" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/wow/wow.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/js/main.js"></script>
+    <script>
+        // Ensure ServiceStartDate is at least the current date and time
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const startDateInput = document.getElementById('AuctionStartDate');
+            const endDateInput = document.getElementById('AuctionEndDate');
+            const now = new Date().toISOString().slice(0, 16);
+            startDateInput.setAttribute('min', now);
+
+            startDateInput.addEventListener('change', function () {
+                const startDate = new Date(this.value);
+                const endDateMin = new Date(startDate);
+                endDateMin.setDate(endDateMin.getDate() + 7);
+                endDateInput.setAttribute('min', endDateMin.toISOString().slice(0, 16));
+            });
+        });
+    </script>
+</body>
+</html>
+

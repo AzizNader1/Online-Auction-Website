@@ -1,0 +1,43 @@
+﻿@model OtherAuction
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="flex-grow p-8">
+    <h1 class="text-4xl font-bold mb-8">@Model.AuctionProdutName Details</h1>
+    <div class="bg-white p-8 rounded-lg shadow-lg hover-shadow mb-8 transition duration-300 ease-in-out flex">
+        <div class="w-1/2 pr-4">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 h-96 object-cover rounded-lg" src="/OtherAuctionImages/@Model.AuctionCoverImage" alt="First slide">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/2 pl-4">
+            <div class="space-y-4 mt-8">
+                <p class="detail-title">Auction Produt Name: <span class="detail-value">@Model.AuctionProdutName</span></p>
+                <p class="detail-title">Auction Category: <span class="detail-value">@Model.AuctionCategory</span></p>
+                <p class="detail-title">Auction Status: <span class="detail-value">@Model.AuctionStatus</span></p>
+                <p class="detail-title">Auction Start Date: <span class="detail-value">@Model.AuctionStartDate</span></p>
+                <p class="detail-title">Auction End Date: <span class="detail-value">@Model.AuctionEndDate</span></p>
+                <p class="detail-title">Auction Desctibtion: <span class="detail-value">@Model.AuctionDesctibtion</span></p>
+                <p class="detail-title">Minimun Sale Price: <span class="detail-value">@Model.MinimunSalePrice</span></p>
+                <p class="detail-title">Auction Start Price: <span class="detail-value">@Model.AuctionStartPrice</span></p>
+                <p class="detail-title">Owner Name: <span class="detail-value">@Model.OwnerName</span></p>
+                <p class="detail-title">Owner Phone: <span class="detail-value">@Model.OwnerPhone</span></p>
+            </div>
+            <div class="flex justify-end space-x-4 mt-8">
+                @if (Model.AuctionStatus == Status.Accepted)
+                {
+                    <a href="/Admins/AcceptedAuctions" class="details-button bg-blue-500 text-white p-3 rounded transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-400" data-type="car">Back To All</a>
+                }
+                else
+                {
+                    <a href="/Admins/RejectedAuctions" class="details-button bg-blue-500 text-white p-3 rounded transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-400" data-type="car">Back To All</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

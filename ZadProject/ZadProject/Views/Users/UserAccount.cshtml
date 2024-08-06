@@ -1,0 +1,410 @@
+﻿@model UserAccountDto
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card-form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .accepted-cards img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+            .form-group i {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                color: #aaa;
+                font-size: 1.2rem; /* Adjust size as needed */
+            }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .success-message {
+            color: green;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .loading-spinner {
+            display: none;
+            margin: 20px auto;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #007bff;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            animation: spin 1s linear infinite;
+        }
+
+        keyframes spin {
+            to
+
+        {
+            transform: rotate(360deg);
+        }
+
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 12px;
+            animation: modalopen 0.5s;
+        }
+
+        keyframes modalopen {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .card-preview {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+            .card-preview h4 {
+                margin: 0 0 10px;
+                font-size: 14px;
+                color: #ddd;
+                font-weight: normal;
+            }
+
+            .card-preview p {
+                margin: 0;
+                font-size: 18px;
+                font-weight: bold;
+                color: #fff;
+            }
+
+            .card-preview .exp-date {
+                display: inline-block;
+                float: right;
+            }
+
+            .card-preview .card-number {
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+
+            .card-preview .card-name {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+        media (max-width: 600px) {
+            .card-form-container
+
+        {
+            width: 100%;
+            padding: 15px;
+        }
+
+        .modal-content {
+            width: 90%;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card-form-container">
+        <form method="post" class="card-form" id="cardForm" enctype="multipart/form-data" asp-action="UserAccount" asp-controller="Users">
+            <h2>Add new card</h2>
+            <div class="accepted-cards mb-3">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+            </div>
+
+            <div class="form-group">
+                <label for="card-number">Card number</label>
+                <input type="text" name="UserAccountNumber" class="form-control" id="card-number" placeholder="0012 3435 7890 8845" maxlength="19" required>
+                <i class="bi bi-credit-card"></i>
+                <div class="error-message" id="card-number-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="expiry-date">Expiry date</label>
+                <input type="text" name="ExpireDate" class="form-control" id="expiry-date" placeholder="03/26" required>
+                <i class="bi bi-calendar"></i>
+                <div class="error-message" id="expiry-date-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="cvv">CCV/CVV</label>
+                <input type="password" name="CvvNumber" class="form-control" id="cvv" placeholder="•••" maxlength="3" required>
+                <i class="bi bi-lock"></i>
+                <a href="#" class="cvv-info">What is CVV?</a>
+                <div class="error-message" id="cvv-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="card-holder">Card holder name</label>
+                <input type="text" class="form-control" id="card-holder" name="HolderName" placeholder="Jonathan" required>
+                <i class="bi bi-person"></i>
+                <div class="error-message" id="card-holder-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="card-holder">Account Balance</label>
+                <input type="number" name="AccountBalance" class="form-control" id="card-balance" placeholder="400000" required>
+                <i class="bi bi-person"></i>
+                <div class="error-message" id="card-balance-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-form-label">Bank Name</label>
+                <select class="form-select" id="bankname" name="bankname">
+                    @foreach (var item in ViewBag.BanksNames)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Save</button>
+            <a class="btn btn-primary w-100" href="~/Home/HomePage">Cancle</a>
+        </form>
+    </div>
+
+    <div id="cardModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="card-preview">
+                <h4>Card Number</h4>
+                <p id="preview-card-number" class="card-number">1234 5678 1234 5678</p>
+                <h4>Card Name</h4>
+                <p id="preview-card-holder" class="card-name">Jenn Jiang</p>
+                <h4>Exp. Date</h4>
+                <p id="preview-expiry-date" class="exp-date">12/30</p>
+                <button id="confirmButton" class="btn btn-success mt-3 w-100">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/validator@13.6.0/validator.min.js"></script>
+    <script>
+
+        // document.getElementById('cardForm').addEventListener('submit', function (event) {
+        //     event.preventDefault();
+
+        //     const cardNumber = document.getElementById('card-number').value;
+        //     const expiryDate = document.getElementById('expiry-date').value;
+        //     const cvv = document.getElementById('cvv').value;
+        //     const cardHolder = document.getElementById('card-holder').value;
+        //     const cardBalance = document.getElementById('card-balance').value;
+
+        //     let isValid = true;
+
+        //     if (!validateCardNumber(cardNumber)) {
+        //         showError('card-number-error', 'Invalid card number');
+        //         isValid = false;
+        //     } else {
+        //         clearError('card-number-error');
+        //     }
+
+        //     if (!validateExpiryDate(expiryDate)) {
+        //         showError('expiry-date-error', 'Invalid expiry date');
+        //         isValid = false;
+        //     } else {
+        //         clearError('expiry-date-error');
+        //     }
+
+        //     if (!validateCVV(cvv)) {
+        //         showError('cvv-error', 'Invalid CVV');
+        //         isValid = false;
+        //     } else {
+        //         clearError('cvv-error');
+        //     }
+
+        //     if (!validateCardHolderName(cardHolder)) {
+        //         showError('card-holder-error', 'Card holder name must contain only letters');
+        //         isValid = false;
+        //     } else {
+        //         clearError('card-holder-error');
+        //     }
+
+
+        //     if (isValid) {
+        //         document.getElementById('loading-spinner').style.display = 'block';
+        //         setTimeout(function () {
+        //             document.getElementById('loading-spinner').style.display = 'none';
+        //             document.getElementById('success-message').textContent = "Card saved successfully!";
+        //             showModal(cardNumber, cardHolder, expiryDate);
+        //         }, 2000);
+        //     }
+        // });
+
+        // function validateCardNumber(number) {
+        //     const regex = /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/;
+        //     return regex.test(number);
+        // }
+
+        // function validateExpiryDate(date) {
+        //     const regex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+        //     if (!regex.test(date)) {
+        //         return false;
+        //     }
+        //     const [month, year] = date.split('/');
+        //     const expiry = new Date(`20${year}`, month);
+        //     const now = new Date();
+        //     return expiry > now;
+        // }
+
+        // function validateCVV(cvv) {
+        //     const regex = /^\d{3}$/;
+        //     return regex.test(cvv);
+        // }
+
+        // function validateCardHolderName(name) {
+        //     const regex = /^[a-zA-Z\s]+$/;
+        //     return regex.test(name);
+        // }
+
+
+        // function showError(id, message) {
+        //     document.getElementById(id).textContent = message + ' Please check and try again.';
+        // }
+
+        // function clearError(id) {
+        //     document.getElementById(id).textContent = '';
+        // }
+
+        function showModal(cardNumber, cardHolder, expiryDate) {
+            document.getElementById('preview-card-number').textContent = cardNumber || '•••• •••• •••• ••••';
+            document.getElementById('preview-card-holder').textContent = cardHolder || 'Full Name';
+            document.getElementById('preview-expiry-date').textContent = expiryDate || 'MM/YY';
+            const modal = document.getElementById('cardModal');
+            modal.style.display = 'block';
+        }
+
+        document.querySelector('.close').onclick = function () {
+            const modal = document.getElementById('cardModal');
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('cardModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        document.getElementById('confirmButton').addEventListener('click', function () {
+            alert('Card confirmed!');
+            const modal = document.getElementById('cardModal');
+            modal.style.display = 'none';
+        });
+
+        document.getElementById('card-number').addEventListener('input', function (event) {
+            let value = event.target.value.replace(/\s+/g, '');
+            let formattedValue = value.match(/.{1,4}/g)?.join(' ') || '';
+            event.target.value = formattedValue;
+            if (!validateCardNumber(formattedValue)) {
+                showError('card-number-error', 'Invalid card number');
+            } else {
+                clearError('card-number-error');
+            }
+        });
+
+        document.getElementById('expiry-date').addEventListener('input', function (event) {
+            if (!validateExpiryDate(event.target.value)) {
+                showError('expiry-date-error', 'Invalid expiry date');
+            } else {
+                clearError('expiry-date-error');
+            }
+        });
+
+        document.getElementById('cvv').addEventListener('input', function (event) {
+            if (!validateCVV(event.target.value)) {
+                showError('cvv-error', 'Invalid CVV');
+            } else {
+                clearError('cvv-error');
+            }
+        });
+    </script>
+</body>
+
+</html>

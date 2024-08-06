@@ -1,0 +1,35 @@
+﻿@model User
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="flex-grow p-8">
+    <h1 class="text-4xl font-bold mb-8">@Model.UserName Details</h1>
+    <div class="bg-white p-8 rounded-lg shadow-lg hover-shadow mb-8 transition duration-300 ease-in-out flex">
+        <div class="w-1/2 pr-4">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 h-96 object-cover rounded-lg" src="/UserImages/@Model.NationalIdImage" alt="First slide">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/2 pl-4">
+            <div class="space-y-4 mt-8">
+                <p class="detail-title">User Name: <span class="detail-value">@Model.UserName</span></p>
+                <p class="detail-title">User Address: <span class="detail-value">@Model.UserAddress</span></p>
+                <p class="detail-title">User Email: <span class="detail-value">@Model.UserEmail</span></p>
+                <p class="detail-title">User Phone: <span class="detail-value">@Model.UserPhone</span></p>
+                <p class="detail-title">User Password: <span class="detail-value">@Model.UserPassword</span></p>
+            </div>
+            <div class="flex justify-end space-x-4 mt-8">
+                <form asp-action="DeleteUser" asp-controller="Admins">
+                    <input hidden name="id" value="@Model.UserId" type="number" />
+                    <input type="submit" value="Delete" class="btn bg-red-500 text-white p-3 rounded transition duration-300 ease-in-out transform hover:scale-105 hover:bg-red-400" />
+                </form>
+                <a href="/Admins/GetAllUsers" class="details-button bg-blue-500 text-white p-3 rounded transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-400" data-type="car">Back To All</a>
+            </div>
+        </div>
+    </div>
+</div>

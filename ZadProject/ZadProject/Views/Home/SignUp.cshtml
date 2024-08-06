@@ -1,0 +1,45 @@
+﻿@model UserDto
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="~/css/loginandsignupdesign.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form method="post" enctype="multipart/form-data" asp-action="SignUp" asp-controller="Home">
+                @if (TempData["SignUpError"] != null)
+                {
+                    <p style="color:red">@TempData["SignUpError"]</p>
+                }
+                <input type="text" name="username" placeholder="type your name" required minlength="3" maxlength="20" />
+
+                <input type="text" name="useremail" placeholder="type your email" required  />
+                <span style="color:red">@ViewBag.EmailError</span>
+
+                <input type="text" placeholder="type your phone" required pattern="^01[0125][0-9]{8}$" title="Please enter a valid Egyptian phone number (e.g., 01012345678)" name="userphone" />
+                <span style="color:red">@ViewBag.PhoneError</span>
+
+                <input type="password" name="userpassword" placeholder="type your password" required minlength="6" />
+
+                <input type="text" name="useraddress" placeholder="type your address" required minlength="5" maxlength="100" />
+
+                <input type="file" name="userimage" id="userimage" required />
+                <button type="submit">Sign Up</button>
+
+                <p>Already have an account? <a href="~/Home/Login">Login</a></p>
+            </form>
+            <a href="/Home/HomePage" class="btn btn-primary">Back to home</a>
+
+        </div>
+        <div class="info-container">
+            <h1>Join ZAD Auction</h1>
+        </div>
+    </div>
+</body>
+</html>

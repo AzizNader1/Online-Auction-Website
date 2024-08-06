@@ -1,0 +1,670 @@
+﻿@model UserDashboardViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>User Profile</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #f8f9fa;
+            padding: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+            .sidebar ul {
+                list-style: none;
+                padding: 0;
+            }
+
+                .sidebar ul li {
+                    padding: 10px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+
+                    .sidebar ul li.active {
+                        background-color: #0D6EFD;
+                        color: #fff;
+                    }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .page {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+            .page.active {
+                display: block;
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+            form div {
+                display: flex;
+                flex-direction: column;
+            }
+
+                form div label {
+                    margin-bottom: 5px;
+                }
+
+                form div input {
+                    padding: 8px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    transition: border-color 0.3s ease;
+                }
+
+                    form div input:focus {
+                        border-color: #0D6EFD;
+                    }
+
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #0D6EFD;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+        }
+
+            button:hover {
+                background-color: #0D6EFD;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            button:active {
+                transform: scale(0.95);
+                background-color: #0D6EFD !important;
+            }
+
+            button.clicked {
+                background-color: #0D6EFD;
+            }
+
+            button[type="button"] {
+                background-color: #6c757d;
+            }
+
+                button[type="button"]:hover {
+                    background-color: #5a6268;
+                }
+
+                button[type="button"]:active {
+                    transform: scale(0.95);
+                    background-color: #545b62 !important;
+                }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            table th, table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            table th {
+                background-color: #f8f9fa;
+            }
+
+        media (max-width: 768px) {
+            .container
+
+        {
+            flex-direction: column;
+        }
+
+        .sidebar {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        form {
+            grid-template-columns: 1fr;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <a href="/Home/HomePage" class="navbar-brand d-flex align-items-center text-center">
+                    <div>
+                        <img class="img-fluid" src="/img/pngwing.com.png" alt="" style="width: 70px; height: 70px;">
+                    </div>
+                    <pre> </pre>
+
+                    <h1 class="	--bs-primary-bg-subtle ">ZAD</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="/Home/HomePage" class="nav-item nav-link active">Home</a>
+                        <a href="/Home/AboutUs" class="nav-item nav-link">About</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Auctions</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="/Users/GetAllRealStateAuctions" class="dropdown-item">Real Estate</a>
+                                <a href="/Users/GetAllCarAuctions" class="dropdown-item">Vehicles</a>
+                                <a href="/Users/GetAllOtherAuctions" class="dropdown-item">Others</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="/Users/UploadAuction" class="dropdown-item">Upload Auctions</a>
+                            </div>
+                        </div>
+                        <a href="/Home/HowItWork" class="nav-item nav-link">H.I.W</a>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <div class="container">
+            <nav class="sidebar">
+                <ul>
+                    <li class="active" data-target="dashboard">Dashboard</li>
+                    <li data-target="profile">My Profile</li>
+                    <li data-target="bidding">My Bidding</li>
+                    <li data-target="purchase">My Purchase</li>
+                    <li data-target="UserCarAuctions">My Car Auctions</li>
+                    <li data-target="UserRealStateAuctions">My RealState Auctions</li>
+                    <li data-target="UserOtherAuctions">My Other Auctions</li>
+                    <li>@Html.ActionLink("Log Out", "LogOut", "Home", null, new { @class = "btn btn-danger" })</li>
+                </ul>
+            </nav>
+            <main class="content">
+                @if (TempData["EditResult"] != null)
+                {
+                    <div class="alert alert-success">
+                        <div style="display:flex;justify-content:center">@TempData["EditResult"] </div>
+                    </div>
+                }
+                <div id="dashboard" class="page active">
+                    <div class="card animate_animated animate_fadeInUp">
+                        <h3>My Pending Number</h3>
+                        <div>@Model.BidingNumber</div>
+                    </div>
+                    <div class="card animate_animated animate_fadeInUp">
+                        <h3>My Purchase Number</h3>
+                        <div>@Model.BuyingNumber</div>
+                    </div>
+                </div>
+                <div id="profile" class="page">
+                    <form id="profileForm" method="post" asp-action="UserProfile" asp-controller="Users" enctype="multipart/form-data">
+                        <div>
+                            <label for="firstName">First Name </label>
+                            <input type="text" id="firstName" name="UserName" value="@Model.User.UserName">
+                        </div>
+                        <div>
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="text" id="contactNumber" name="UserPhone" value="@Model.User.UserPhone" pattern="\d{11}">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="UserEmail" value="@Model.User.UserEmail">
+                        </div>
+                        <div>
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="UserAddress" value="@Model.User.UserAddress">
+                        </div>
+                        <div>
+                            <label for="password">Password </label>
+                            <input type="password" id="password" name="UserPassword" value="@Model.User.UserPassword" minlength="8">
+                        </div>
+                        <div>
+                            <label for="image">Image </label>
+                            <input type="file" id="image" name="image">
+                        </div>
+                        <div>
+                            <button type="submit">Update Profile</button>
+                            <button type="button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="bidding" class="page">
+                    @if (Model.AllUserBiding.BidingCarAuctionDto.Count == 0 && Model.AllUserBiding.BidingOtherAuctionDto.Count == 0 && Model.AllUserBiding.BidingRealStateAuctionDto.Count == 0)
+                    {
+                        <h4 style="display:flex;justify-content:center;align-items:center;color:dodgerblue;font-size:25px">you have no biding on any auction yet</h4>
+
+                    }
+                    else
+                    {
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Auction Image</th>
+                                    <th>Biding Amount</th>
+                                    <th>Biding Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+                                @foreach (var item in Model.AllUserBiding.BidingCarAuctionDto)
+                                {
+                                    <tr>
+                                        <td><img src="/CarAuctionImages/@item.CarAuction.AuctionImage" alt="Image" width="50"></td>
+                                        <td>@item.BidingCarAuction.BidingPrice</td>
+                                        <td>@item.BidingCarAuction.BidingDate</td>
+                                    </tr>
+                                }
+                                @foreach (var item in Model.AllUserBiding.BidingOtherAuctionDto)
+                                {
+                                    <tr>
+                                        <td><img src="/OtherAuctionImages/@item.OtherAuction.AuctionCoverImage" alt="Image" width="50"></td>
+                                        <td>@item.BidingOtherAuction.BidingPrice</td>
+                                        <td>@item.BidingOtherAuction.BidingDate</td>
+                                    </tr>
+                                }
+                                @foreach (var item in Model.AllUserBiding.BidingRealStateAuctionDto)
+                                {
+                                    <tr>
+                                        <td><img src="/RealStateAuctionImages/@item.RealStateAuction.AuctionImage" alt="Image" width="50"></td>
+                                        <td>@item.BidingRealStateAuction.BidingPrice</td>
+                                        <td>@item.BidingRealStateAuction.BidingDate</td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    }
+                </div>
+                <div id="purchase" class="page">
+                    @if (Model.AllUserBuying.BuyingCarAuctionDto.Count == 0 && Model.AllUserBuying.BuyingOtherAuctionDto.Count == 0 && Model.AllUserBuying.BuyingRealStateAuctionDto.Count == 0)
+                    {
+                        <h4 style="display:flex;justify-content:center;align-items:center;color:dodgerblue;font-size:25px">you have no purchases yet</h4>
+
+                    }
+                    else
+                    {
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Owner Name</th>
+                                    <th>Owner Phone</th>
+                                    <th>Auction Image</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+                                @foreach (var item in Model.AllUserBuying.BuyingCarAuctionDto)
+                                {
+                                    <tr>
+                                        <td>@item.CarAuction.OwnerName</td>
+                                        <td>@item.CarAuction.OwnerPhone</td>
+                                        <td><img src="/CarAuctionImages/@item.CarAuction.AuctionImage" alt="Image" width="50"></td>
+                                    </tr>
+                                }
+                                @foreach (var item in Model.AllUserBuying.BuyingOtherAuctionDto)
+                                {
+                                    <tr>
+                                        <td>@item.OtherAuction.OwnerName</td>
+                                        <td>@item.OtherAuction.OwnerPhone</td>
+                                        <td><img src="/OtherAuctionImages/@item.OtherAuction.AuctionCoverImage" alt="Image" width="50"></td>
+                                    </tr>
+                                }
+                                @foreach (var item in Model.AllUserBuying.BuyingRealStateAuctionDto)
+                                {
+                                    <tr>
+                                        <td>@item.RealStateAuction.OwnerName</td>
+                                        <td>@item.RealStateAuction.OwnerPhone</td>
+                                        <td><img src="/RealStateAuctionImages/@item.RealStateAuction.AuctionImage" alt="Image" width="50"></td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    }
+                </div>
+
+                <div id="UserCarAuctions" class="page">
+                    @if (Model.UserCarAuctions.Count == 0)
+                    {
+                        <h4 style="display:flex;justify-content:center;align-items:center;color:dodgerblue;font-size:25px">you have no car auctions uploaded yet</h4>
+
+                    }
+                    else
+                    {
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Year Of Manufacture</th>
+                                    <th>Auction Start Date</th>
+                                    <th>Auction End Date</th>
+                                    <th>Minimun Sale Price</th>
+                                    <th>Warranty</th>
+                                    <th>Auction Image</th>
+                                    <th>Auction Status</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+                                @foreach (var item in Model.UserCarAuctions)
+                                {
+                                    <tr>
+                                        <td>@item.YearOfManufacture</td>
+                                        <td>@item.AuctionStartDate</td>
+                                        <td>@item.AuctionEndDate</td>
+                                        <td>@item.MinimunSalePrice</td>
+                                        <td>@item.Warranty</td>
+                                        <td><img src="/CarAuctionImages/@item.AuctionImage" alt="Image" width="50"></td>
+                                        <td>@item.AuctionStatus</td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    }
+                </div>
+
+                <div id="UserRealStateAuctions" class="page">
+                    @if (Model.UserRealStateAuctions.Count == 0)
+                    {
+                        <h4 style="display:flex;justify-content:center;align-items:center;color:dodgerblue;font-size:25px">you have no car auctions uploaded yet</h4>
+
+                    }
+                    else
+                    {
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type Of Property</th>
+                                    <th>Auction Start Date</th>
+                                    <th>Auction End Date</th>
+                                    <th>Auction Price</th>
+                                    <th>Number Of Floors</th>
+                                    <th>Auction Image</th>
+                                    <th>Auction Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+                                @foreach (var item in Model.UserRealStateAuctions)
+                                {
+                                    <tr>
+                                        <td>@item.TypeOfProperty</td>
+                                        <td>@item.AuctionStartDate</td>
+                                        <td>@item.AuctionEndDate</td>
+                                        <td>@item.StartingPrice</td>
+                                        <td>@item.NumberOfFloors</td>
+                                        <td><img src="/RealStateAuctionImages/@item.AuctionImage" alt="Image" width="50"></td>
+                                        <td>@item.AuctionStatus</td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    }
+                </div>
+
+                <div id="UserOtherAuctions" class="page">
+                    @if (Model.UserOtherAuctions.Count == 0)
+                    {
+                        <h4 style="display:flex;justify-content:center;align-items:center;color:dodgerblue;font-size:25px">you have no other auctions uploaded yet</h4>
+
+                    }
+                    else
+                    {
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Auction Produt Name</th>
+                                    <th>Auction Category</th>
+                                    <th>Auction Start Date</th>
+                                    <th>Auction End Date</th>
+                                    <th>Auction Price</th>
+                                    <th>Auction Image</th>
+                                    <th>Auction Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+                                @foreach (var item in Model.UserOtherAuctions)
+                                {
+                                    <tr>
+                                        <td>@item.AuctionProdutName</td>
+                                        <td>@item.AuctionCategory</td>
+                                        <td>@item.AuctionStartDate</td>
+                                        <td>@item.AuctionEndDate</td>
+                                        <td>@item.AuctionStartPrice</td>
+                                        <td><img src="/OtherAuctionImages/@item.AuctionCoverImage" alt="Image" width="50"></td>
+                                        <td>@item.AuctionStatus</td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="/Home/AboutUs">About Us</a>
+                        <a class="btn btn-link text-white-50" href="/Home/AboutUs">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Photo Gallery</h5>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="/Home/HomePage">MAZAD</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">Mazad Team</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="/Home/HomePage">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/wow/wow.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebarItems = document.querySelectorAll('.sidebar ul li');
+            const pages = document.querySelectorAll('.page');
+
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    sidebarItems.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+
+                    pages.forEach(page => {
+                        page.classList.remove('active');
+                        if (page.id === item.getAttribute('data-target')) {
+                            page.classList.add('active');
+                        }
+                    });
+
+                    pages.forEach(page => {
+                        if (page.classList.contains('active')) {
+                            page.classList.add('animate_animated', 'animate_fadeInUp');
+                        } else {
+                            page.classList.remove('animate_animated', 'animate_fadeInUp');
+                        }
+                    });
+                });
+            });
+
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    button.classList.add('clicked');
+                    setTimeout(() => {
+                        button.classList.remove('clicked');
+                    }, 500);
+                });
+            });
+
+
+        });
+    </script>
+</body>
+</html>

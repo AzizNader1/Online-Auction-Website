@@ -1,0 +1,621 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ZadProject.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ZadProject.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\CarAuctionImages\\Screenshot 2023-06-30 152155.png",
+      "PackagePath": "staticwebassets\\CarAuctionImages\\Screenshot 2023-06-30 152155.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\CarAuctionImages\\Screenshot 2024-06-22 202220.png",
+      "PackagePath": "staticwebassets\\CarAuctionImages\\Screenshot 2024-06-22 202220.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\OtherAuctionImages\\Screenshot 2023-06-30 152155.png",
+      "PackagePath": "staticwebassets\\OtherAuctionImages\\Screenshot 2023-06-30 152155.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\OtherAuctionImages\\Screenshot 2024-06-22 202220.png",
+      "PackagePath": "staticwebassets\\OtherAuctionImages\\Screenshot 2024-06-22 202220.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\RealStateAuctionImages\\Screenshot 2024-06-22 202220.png",
+      "PackagePath": "staticwebassets\\RealStateAuctionImages\\Screenshot 2024-06-22 202220.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\RealStateAuctionImages\\differenze-tra-web-trasparente-deep-web-e-dark-web-1080x656.png",
+      "PackagePath": "staticwebassets\\RealStateAuctionImages\\differenze-tra-web-trasparente-deep-web-e-dark-web-1080x656.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\UserImages\\Screenshot 2023-06-30 152155.png",
+      "PackagePath": "staticwebassets\\UserImages\\Screenshot 2023-06-30 152155.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\UserImages\\Screenshot 2024-06-22 202220.png",
+      "PackagePath": "staticwebassets\\UserImages\\Screenshot 2024-06-22 202220.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\UserImages\\WhatsApp Image 2024-03-01 at 14.18.43_3073eaad.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\WhatsApp Image 2024-03-01 at 14.18.43_3073eaad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\css\\LoginAndSignUpDesign.css",
+      "PackagePath": "staticwebassets\\css\\LoginAndSignUpDesign.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\css\\Updated styles.css",
+      "PackagePath": "staticwebassets\\css\\Updated styles.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\2e40027b9b156589cfbccbf7b33d3bc7.jpg",
+      "PackagePath": "staticwebassets\\img\\2e40027b9b156589cfbccbf7b33d3bc7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\367cebffa69f3a9f08620b3915429e5e (1).jpg",
+      "PackagePath": "staticwebassets\\img\\367cebffa69f3a9f08620b3915429e5e (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\367cebffa69f3a9f08620b3915429e5e.jpg",
+      "PackagePath": "staticwebassets\\img\\367cebffa69f3a9f08620b3915429e5e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\496aad6753e634854e03ed350d31b72a.jpg",
+      "PackagePath": "staticwebassets\\img\\496aad6753e634854e03ed350d31b72a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\about.jpg",
+      "PackagePath": "staticwebassets\\img\\about.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\afa5c7fa3d43dd1a5fd3a2814f46a839.jpg",
+      "PackagePath": "staticwebassets\\img\\afa5c7fa3d43dd1a5fd3a2814f46a839.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\auction.png",
+      "PackagePath": "staticwebassets\\img\\auction.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\b881883bdd65b4c4ed7ba52f462a45c6.jpg",
+      "PackagePath": "staticwebassets\\img\\b881883bdd65b4c4ed7ba52f462a45c6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\call-to-action.jpg",
+      "PackagePath": "staticwebassets\\img\\call-to-action.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\carousel-1.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\cicon.png",
+      "PackagePath": "staticwebassets\\img\\cicon.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\d80eeec7f30a1cca29937104fb479a5d.jpg",
+      "PackagePath": "staticwebassets\\img\\d80eeec7f30a1cca29937104fb479a5d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\e32c8103d46f8c2f485097b055835ed7.jpg",
+      "PackagePath": "staticwebassets\\img\\e32c8103d46f8c2f485097b055835ed7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\eff2c64b788c57a76c97565a3ec96e6d.jpg",
+      "PackagePath": "staticwebassets\\img\\eff2c64b788c57a76c97565a3ec96e6d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\electric-car.png",
+      "PackagePath": "staticwebassets\\img\\electric-car.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\f1.jpg",
+      "PackagePath": "staticwebassets\\img\\f1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\f2.jpg",
+      "PackagePath": "staticwebassets\\img\\f2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\f3.jpg",
+      "PackagePath": "staticwebassets\\img\\f3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\f5.jpg",
+      "PackagePath": "staticwebassets\\img\\f5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\f61d7c0e4ac32f7edb8fdf9afde039c9.jpg",
+      "PackagePath": "staticwebassets\\img\\f61d7c0e4ac32f7edb8fdf9afde039c9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\header.jpg",
+      "PackagePath": "staticwebassets\\img\\header.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\icon-apartment.png",
+      "PackagePath": "staticwebassets\\img\\icon-apartment.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\icon-building.png",
+      "PackagePath": "staticwebassets\\img\\icon-building.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\icon-condominium.png",
+      "PackagePath": "staticwebassets\\img\\icon-condominium.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\icon-deal.png",
+      "PackagePath": "staticwebassets\\img\\icon-deal.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\icon-house.png",
+      "PackagePath": "staticwebassets\\img\\icon-house.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\icon-housing.png",
+      "PackagePath": "staticwebassets\\img\\icon-housing.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\icon-luxury.png",
+      "PackagePath": "staticwebassets\\img\\icon-luxury.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\icon-neighborhood.png",
+      "PackagePath": "staticwebassets\\img\\icon-neighborhood.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\icon-search.png",
+      "PackagePath": "staticwebassets\\img\\icon-search.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\icon-villa.png",
+      "PackagePath": "staticwebassets\\img\\icon-villa.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\im1.jpg",
+      "PackagePath": "staticwebassets\\img\\im1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\im2.jpg",
+      "PackagePath": "staticwebassets\\img\\im2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\im3.jpg",
+      "PackagePath": "staticwebassets\\img\\im3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\im4.jpg",
+      "PackagePath": "staticwebassets\\img\\im4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\mon.jpg",
+      "PackagePath": "staticwebassets\\img\\mon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\oicon.png",
+      "PackagePath": "staticwebassets\\img\\oicon.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\pngwing.com.png",
+      "PackagePath": "staticwebassets\\img\\pngwing.com.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\property-1.jpg",
+      "PackagePath": "staticwebassets\\img\\property-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\property-2.jpg",
+      "PackagePath": "staticwebassets\\img\\property-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\property-3.jpg",
+      "PackagePath": "staticwebassets\\img\\property-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\property-4.jpg",
+      "PackagePath": "staticwebassets\\img\\property-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\property-5.jpg",
+      "PackagePath": "staticwebassets\\img\\property-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\property-6.jpg",
+      "PackagePath": "staticwebassets\\img\\property-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\ricon.png",
+      "PackagePath": "staticwebassets\\img\\ricon.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\team-1.jpg",
+      "PackagePath": "staticwebassets\\img\\team-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\team-2.jpg",
+      "PackagePath": "staticwebassets\\img\\team-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\team-3.jpg",
+      "PackagePath": "staticwebassets\\img\\team-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\team-4.jpg",
+      "PackagePath": "staticwebassets\\img\\team-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\testimonial-1.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\testimonial-2.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\testimonial-3.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\img\\testimonial-4.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\animate\\animate.css",
+      "PackagePath": "staticwebassets\\lib\\animate\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\animate\\animate.min.css",
+      "PackagePath": "staticwebassets\\lib\\animate\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\waypoints\\links.php",
+      "PackagePath": "staticwebassets\\lib\\waypoints\\links.php"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\waypoints\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\wow\\wow.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.js"
+    },
+    {
+      "Id": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\wow\\wow.min.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ZadProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ZadProject.props",
+      "PackagePath": "build\\ZadProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ZadProject.props",
+      "PackagePath": "buildMultiTargeting\\ZadProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ZadProject.props",
+      "PackagePath": "buildTransitive\\ZadProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        .hero-section {
+            background-color: #007BFF;
+            padding: 30px 0;
+            color: #fff;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .hero-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+            }
+
+            .hero-section img {
+                max-width: 80%;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                position: relative;
+                z-index: 2;
+            }
+
+            .hero-section h1 {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+                color: #fff;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+
+            .hero-section p {
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+                color: #f1f1f1;
+            }
+
+        .container-custom {
+            margin: 20px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #007BFF;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+            section p,
+            section ul {
+                font-size: 1rem;
+                color: #555;
+                margin-bottom: 15px;
+            }
+
+            section ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+
+                section ul li {
+                    background: url('img/check.svg') no-repeat left center;
+                    background-size: 20px;
+                    padding-left: 30px;
+                    margin-bottom: 10px;
+                }
+
+        .social-links a {
+            margin: 0 10px;
+            color: #007BFF;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+            .social-links a:hover {
+                color: #0056b3;
+                transform: scale(1.1);
+            }
+
+        .btn:hover {
+            background-color: #0056b3;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        .container-custom {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            perspective: 1000px;
+            transform: rotateX(15deg);
+            transition: transform 0.3s ease;
+        }
+
+            .btn:hover {
+                transform: rotateX(0deg);
+            }
+
+        #myVideo {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .btn-primary {
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+
+        /* New Style for Blue Card */
+        .blue-card {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 800px;
+        }
+
+            .blue-card h1 {
+                margin: 0;
+                font-size: 2rem;
+            }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Video Background Start -->
+        <video autoplay muted loop id="myVideo">
+            <source src="path/to/your/video.mp4" type="video/mp4">
+        </video>
+        <!-- Video Background End -->
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <a href="/Home/HomePage" class="navbar-brand d-flex align-items-center text-center">
+                    <div>
+                        <img class="img-fluid" src="/img/pngwing.com.png" alt="" style="width: 70px; height: 70px;">
+                    </div>
+                    <pre> </pre>
+
+                    <h1 class="	--bs-primary-bg-subtle ">ZAD</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="/Home/HomePage" class="nav-item nav-link active">Home</a>
+                        <div class="nav-item dropdown">
+                            <a href="/Users/GetAllAuctions" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Auctions</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="/Users/GetAllRealStateAuctions" class="dropdown-item">Real Estate</a>
+                                <a href="/Users/GetAllCarsAuctions" class="dropdown-item">Vehicles</a>
+                                <a href="/Users/GetAllOtherAuctions" class="dropdown-item">Others</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="/Users/UploadAuction" class="dropdown-item">Upload Auctions</a>
+                            </div>
+                        </div>
+                        <a href="/Home/HowItWork" class="nav-item nav-link">H.I.W</a>
+
+                        <a href="/Home/AboutUs" class="nav-item nav-link">About US</a>
+                    </div>
+                    @if (TempData["UserId"] != null)
+                    {
+                        <a href="/Users/UserDashboard/@TempData["UserId"]" class="btn btn-secondary --bs-primary-bg-subtle text-bg-primary p-2 px-3 d-none d-lg-flex">User Profile</a>
+                    }
+                    else
+                    {
+                        <a href="/Home/Login" class="btn btn-primary">Login</a>
+
+                    }
+                    <!-- <div class="text-bg-primary p-3">Primary with contrasting color</div> -->
+
+
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+        <!-- Hero Section Start -->
+        <div class="container-fluid hero-section text-center" data-aos="fade-up">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <img src="call-to-action.jpg" alt="Certified Agent">
+                    </div>
+                    <div class="col-md-6 text-start" data-aos="fade-left">
+                        <h1 class="mb-3">Contact With Our Certified Agent</h1>
+                        <p>If you have any questions or need assistance, please do not hesitate to contact us. Our customer support team is always ready to answer your inquiries and provide the necessary help.</p>
+                        <div class="contact-info">
+                            <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                            <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                            <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Section End -->
+        <!-- Blue Card Start -->
+        <!-- Blue Card End -->
+        <!-- About Section Start -->
+        <div class="container container-custom" data-aos="fade-up">
+            <header>
+                <h1 class="section-title">About Us</h1>
+                <p>Welcome to "ZAD", your premier destination for online auctions and tenders. We are an innovative platform that enables users to buy and sell a wide range of products and services through a transparent and secure bidding system. Our goal is to provide a unique and exceptional experience that allows everyone to seize great opportunities in the world of e-commerce.</p>
+            </header>
+
+            <section id="vision">
+                <h2 class="section-title">Our Vision</h2>
+                <p>We aim to be the leading platform in the field of auctions and tenders, offering the highest levels of quality, transparency, and security to our customers. Our vision is to empower individuals and businesses to achieve their commercial objectives by providing a reliable and user-friendly environment.</p>
+            </section>
+
+            <section id="mission">
+                <h2 class="section-title">Our Mission</h2>
+                <p>Our mission is to deliver outstanding and secure services to all users through a transparent bidding system, exceptional customer support, and an excellent user experience. We are committed to helping our customers find the best deals and opportunities available in the market.</p>
+            </section>
+
+            <section id="values">
+                <h2 class="section-title">Our Values</h2>
+                <ul>
+                    <li><strong>Transparency:</strong> We ensure that all auctions and tenders are conducted with complete transparency, providing clear and accurate information about each product or service.</li>
+                    <li><strong>Security:</strong> We prioritize protecting our users' data and securing all transactions on our platform.</li>
+                    <li><strong>Excellence:</strong> We offer high-quality services and strive to meet our customers' needs in the best possible way.</li>
+                    <li><strong>Innovation:</strong> We continuously seek to improve and develop our platform to provide the best possible user experience.</li>
+                </ul>
+            </section>
+
+            <section id="services">
+                <h2 class="section-title">Our Services</h2>
+                <p>We offer a wide range of products and services available for bidding, including:</p>
+                <ul>
+                    <li><strong>Vehicles:</strong> Bid on a variety of cars, from economical vehicles to luxury cars.</li>
+                    <li><strong>Real Estate:</strong> Bid on residential and commercial properties at competitive prices.</li>
+                    <li><strong>Others:</strong> A dedicated section for various products and services that users wish to auction.</li>
+                </ul>
+            </section>
+
+            <div class="social-links text-center" data-aos="zoom-in">
+                <a class="btn btn-outline-primary btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-primary btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-primary btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-outline-primary btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <!-- About Section End -->
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="/Home/AboutUs">About Us</a>
+                        <a class="btn btn-link text-white-50" href="/Home/AboutUs">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Photo Gallery</h5>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="/img/property-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="/Home/HomePage">MAZAD</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">Mazad Team</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="/Home/HomePage">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/lib/wow/wow.min.js"></script>
+        <script src="/lib/easing/easing.min.js"></script>
+        <script src="/lib/waypoints/waypoints.min.js"></script>
+        <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script>
+            AOS.init();
+
+            var controller = new ScrollMagic.Controller();
+            new ScrollMagic.Scene({
+                triggerElement: ".hero-section"
+            })
+                .setClassToggle(".hero-section", "fade-in")
+                .addTo(controller);
+        </script>
+        <script src="/js/main.js"></script>
+    </div>
+</body>
+
+</html>

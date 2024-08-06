@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-grow p-8">
+        <h1 class="text-4xl font-bold mb-6">Welcome to the Admin Dashboard</h1>
+        <div class="grid grid-cols-3 gap-8 mb-6">
+            <div class="bg-blue-500 text-white p-6 rounded shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Pending: <span id="pending-count">@ViewBag.PendingNumber</span></div>
+            <div class="bg-green-500 text-white p-6 rounded shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Accepted: <span id="accepted-count">@ViewBag.AcceptedNumber</span></div>
+            <div class="bg-red-500 text-white p-6 rounded shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Rejected: <span id="rejected-count">@ViewBag.RejectedNumber</span></div>
+        </div>
+    </div>
+</body>
+</html>

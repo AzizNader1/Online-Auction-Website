@@ -1,0 +1,94 @@
+﻿@model AllPendingAuctions;
+@{
+    Layout = "_AdminLayout";
+}
+
+@if (TempData["ActionResult"] != null)
+{
+    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+        <span class="block sm:inline text-center text-xl">@TempData["ActionResult"]</span>
+    </div>
+}
+
+<div class="flex-grow p-8">
+    <h1 class="text-4xl font-bold mb-6">Pending Auctions</h1>
+    @if (Model.PendingCarAuctions.Count() == 0 && Model.PendingRealStateAuctions.Count() == 0 && Model.PendingOtherAuctions.Count() == 0)
+    {
+        <h4 style="display:flex;justify-content:center;align-items:center;font-size:25px;">There is no pending auctions available yet</h4>
+    }
+    else
+    {
+        <h4>Pending Car Auctions</h4>
+        <hr />
+        @if (Model.PendingCarAuctions.Count == 0)
+        {
+            <h4 style="display:flex;justify-content:center;align-items:center;color:dodgerblue;font-size:25px">There are no auctions available here</h4>
+        }
+        else
+        {
+            <div class="flex flex-wrap -mx-4">
+                @foreach (var item in Model.PendingCarAuctions)
+                {
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="auction-card bg-white p-6 rounded shadow-lg flex flex-col justify-between h-full transition duration-300 ease-in-out transform hover:scale-105">
+                            <div>
+                                <p class="font-bold">Product Name: <span class="font-normal">@item.CarModel</span></p>
+                                <p class="font-bold">Number Of Doors: <span class="font-normal">@item.NumberOfDoors</span></p>
+                            </div>
+                            <a href="/Admins/CarAuctionDetailsForChangeStatus/@item.CarAuctionId" class="bg-blue-500 text-white p-3 rounded mt-4 transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-400">Details</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        <hr />
+        <h4>Pending Other Auctions</h4>
+        <hr />
+        @if (Model.PendingOtherAuctions.Count == 0)
+        {
+            <h4 style="display:flex;justify-content:center;align-items:center;color:dodgerblue;font-size:25px">There are no auctions available here</h4>
+        }
+        else
+        {
+            <div class="flex flex-wrap -mx-4">
+                @foreach (var item in Model.PendingOtherAuctions)
+                {
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="auction-card bg-white p-6 rounded shadow-lg flex flex-col justify-between h-full transition duration-300 ease-in-out transform hover:scale-105">
+                            <div>
+                                <p class="font-bold">Auction Type: <span class="font-normal">@item.AuctionCategory</span></p>
+                                <p class="font-bold">Product Name: <span class="font-normal">@item.AuctionProdutName</span></p>
+                                <p class="font-bold">Description: <span class="font-normal">@item.AuctionDesctibtion</span></p>
+                            </div>
+                            <a href="/Admins/OtherAuctionDetailsForChangeStatus/@item.OtherAuctionId" class="bg-blue-500 text-white p-3 rounded mt-4 transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-400">Details</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        <hr />
+        <h4>Pending RealState Auctions</h4>
+        <hr />
+        @if (Model.PendingRealStateAuctions.Count == 0)
+        {
+            <h4 style="display:flex;justify-content:center;align-items:center;color:dodgerblue;font-size:25px">There are no auctions available here</h4>
+        }
+        else
+        {
+            <div class="flex flex-wrap -mx-4">
+                @foreach (var item in Model.PendingRealStateAuctions)
+                {
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="auction-card bg-white p-6 rounded shadow-lg flex flex-col justify-between h-full transition duration-300 ease-in-out transform hover:scale-105">
+                            <div>
+                                <p class="font-bold">Condition: <span class="font-normal">@item.Condition</span></p>
+                                <p class="font-bold">Parking: <span class="font-normal">@item.Parking</span></p>
+                            </div>
+                            <a href="/Admins/RealStateAuctionDetailsForChangeStatus/@item.RealStateAuctionId" class="bg-blue-500 text-white p-3 rounded mt-4 transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-400">Details</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    }
+</div>

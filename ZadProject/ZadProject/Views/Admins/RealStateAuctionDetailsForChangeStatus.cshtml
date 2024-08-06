@@ -1,0 +1,49 @@
+﻿@model RealStateAuction
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="flex-grow p-8">
+    <h1 class="text-4xl font-bold mb-8">@Model.TypeOfProperty Details</h1>
+    <div class="bg-white p-8 rounded-lg shadow-lg hover-shadow mb-8 transition duration-300 ease-in-out flex">
+        <div class="w-1/2 pr-4">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 h-96 object-cover rounded-lg" src="/CarAuctionImages/@Model.AuctionImage" alt="First slide">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/2 pl-4">
+            <div class="space-y-4">
+                <p class="detail-title">Type Of Property: <span class="detail-value">@Model.TypeOfProperty</span></p>
+                <p class="detail-title">Parking: <span class="detail-value">@Model.Parking</span></p>
+                <p class="detail-title">Starting Price: <span class="detail-value">@Model.StartingPrice</span></p>
+                <p class="detail-title">Number Of Rooms: <span class="detail-value">@Model.NumberOfRooms</span></p>
+                <p class="detail-title">Number Of Bathrooms: <span class="detail-value">@Model.NumberOfBathrooms</span></p>
+                <p class="detail-title">Minimun Sale Price: <span class="detail-value">@Model.MinimunSalePrice</span></p>
+                <p class="detail-title">House Address: <span class="detail-value">@Model.HouseAddress</span></p>
+                <p class="detail-title">Auction Start Date: <span class="detail-value">@Model.AuctionStartDate</span></p>
+                <p class="detail-title">Auction End Date: <span class="detail-value">@Model.AuctionEndDate</span></p>
+                <p class="detail-title">Auction Status: <span class="detail-value">@Model.AuctionStatus</span></p>
+                <p class="detail-title">House Size: <span class="detail-value">@Model.HouseSize</span></p>
+                <p class="detail-title">Condition: <span class="detail-value">@Model.Condition</span></p>
+                <p class="detail-title">Year Of Build: <span class="detail-value">@Model.YearOfBuild</span></p>
+                <p class="detail-title">Owner Name: <span class="detail-value">@Model.OwnerName</span></p>
+                <p class="detail-title">Owner Phone: <span class="detail-value">@Model.OwnerPhone</span></p>
+            </div>
+            <div class="flex justify-end space-x-4 mt-8">
+                <form asp-action="RealStateAuctionChangeStatusToAccept" asp-controller="Admins">
+                    <input hidden type="number" name="id" value="@Model.RealStateAuctionId" />
+                    <input type="submit" value="Accept" class="bg-green-500 text-white px-4 py-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-102 hover:bg-green-600" />
+                </form>
+                <form asp-action="RealStateAuctionChangeStatusToReject" asp-controller="Admins">
+                    <input hidden type="number" name="id" value="@Model.RealStateAuctionId" />
+                    <input type="submit" value="Reject" class="bg-red-500 text-white px-4 py-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-102 hover:bg-red-600" />
+                </form>
+                <a href="/Admins/PendingAuctions" class="details-button bg-blue-500 text-white px-4 py-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-400">Back To All</a>
+            </div>
+        </div>
+    </div>
+</div>

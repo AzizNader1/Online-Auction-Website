@@ -1,0 +1,89 @@
+﻿@model AllCompletedAuctions;
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="flex-grow p-8">
+    <h1 class="text-4xl font-bold mb-6">Completed Auctions</h1>
+    @if (Model.CompletedCarAuctions.Count() == 0 && Model.CompletedOtherAuctions.Count() == 0 && Model.CompletedRealStateAuctions.Count() == 0)
+    {
+        <h4 style="display:flex;justify-content:center;align-items:center;font-size:25px;">There are no Completed auctions available yet</h4>
+    }
+    else
+    {
+        <h4>Completed Car Auctions</h4>
+        <hr />
+        @if (Model.CompletedCarAuctions.Count == 0)
+        {
+            <h4 style="display:flex;justify-content:center;align-items:center;color:dodgerblue;font-size:25px">There are no car auctions available here</h4>
+        }
+        else
+        {
+            <div class="flex flex-wrap -mx-4">
+                @foreach (var item in Model.CompletedCarAuctions)
+                {
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="auction-card bg-white p-6 rounded shadow-lg flex flex-col justify-between h-full transition duration-300 ease-in-out transform hover:scale-105">
+                            <div>
+                                <p class="font-bold">Auction Type: <span class="font-normal">@item.AuctionType</span></p>
+                                <p class="font-bold">Number Of Doors: <span class="font-normal">@item.NumberOfDoors</span></p>
+                                <p class="font-bold">Car Model: <span class="font-normal">@item.CarModel</span></p>
+                            </div>
+                            <a href="/Admins/CarAuctionDetails/@item.CarAuctionId" class="bg-blue-500 text-white p-3 rounded mt-4 transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-400">Details</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        <hr />
+        <h4>Completed Other Auctions</h4>
+        <hr />
+        @if (Model.CompletedOtherAuctions.Count == 0)
+        {
+            <h4 style="display:flex;justify-content:center;align-items:center;color:dodgerblue;font-size:25px">There are no other auctions available here</h4>
+        }
+        else
+        {
+            <div class="flex flex-wrap -mx-4">
+                @foreach (var item in Model.CompletedOtherAuctions)
+                {
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="auction-card bg-white p-6 rounded shadow-lg flex flex-col justify-between h-full transition duration-300 ease-in-out transform hover:scale-105">
+                            <div>
+                                <p class="font-bold">Auction Type: <span class="font-normal">@item.AuctionCategory</span></p>
+                                <p class="font-bold">Product Name: <span class="font-normal">@item.AuctionProdutName</span></p>
+                                <p class="font-bold">Auction Description: <span class="font-normal">@item.AuctionDesctibtion</span></p>
+                            </div>
+                            <a href="/Admins/OtherAuctionDetails/@item.OtherAuctionId" class="bg-blue-500 text-white p-3 rounded mt-4 transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-400">Details</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        <hr />
+        <h4>Completed RealState Auctions</h4>
+        <hr />
+        @if (Model.CompletedRealStateAuctions.Count == 0)
+        {
+            <h4 style="display:flex;justify-content:center;align-items:center;color:dodgerblue;font-size:25px">There are no real estate auctions available here</h4>
+        }
+        else
+        {
+            <div class="flex flex-wrap -mx-4">
+                @foreach (var item in Model.CompletedRealStateAuctions)
+                {
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="auction-card bg-white p-6 rounded shadow-lg flex flex-col justify-between h-full transition duration-300 ease-in-out transform hover:scale-105">
+                            <div>
+                                <p class="font-bold">Auction Type: <span class="font-normal">Real Estate</span></p>
+                                <p class="font-bold">Location: <span class="font-normal">@item.HouseAddress</span></p>
+                                <p class="font-bold">Owner Name: <span class="font-normal">@item.OwnerName</span></p>
+                            </div>
+                            <a href="/Admins/RealStateAuctionDetails/@item.RealStateAuctionId" class="bg-blue-500 text-white p-3 rounded mt-4 transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-400">Details</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    }
+</div>
