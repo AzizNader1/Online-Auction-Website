@@ -17,38 +17,38 @@ namespace ZadProject.Controllers
             _context = context;
         }
 
-        //[HttpGet]
-        //public IActionResult UserAccount()
-        //{
-        //    if (HttpContext.Session.GetInt32("UserId") == null)
-        //    {
+        [HttpGet]
+        public IActionResult UserAccount()
+        {
+            if (HttpContext.Session.GetInt32("UserId") == null)
+            {
 
-        //        TempData["UserId"] = null;
-        //    }
-        //    else
-        //    {
-        //        TempData["UserId"] = HttpContext.Session.GetInt32("UserId");
-        //    }
+                TempData["UserId"] = null;
+            }
+            else
+            {
+                TempData["UserId"] = HttpContext.Session.GetInt32("UserId");
+            }
 
-        //    var banks = _context.Banks.ToList();
+            var banks = _context.Banks.ToList();
 
-        //    // Create a list of SelectListItem from your banks
-        //    var banksNames = banks.Select(b => new SelectListItem
-        //    {
-        //        Text = b.BankName,
-        //        Value = b.BankName // You can adjust Value property based on your requirement
-        //    }).ToList();
+            // Create a list of SelectListItem from your banks
+            var banksNames = banks.Select(b => new SelectListItem
+            {
+                Text = b.BankName,
+                Value = b.BankName // You can adjust Value property based on your requirement
+            }).ToList();
 
-        //    // Add an option for default selection
-        //    banksNames.Insert(0, new SelectListItem
-        //    {
-        //        Text = "-- Select your bank --",
-        //        Value = ""
-        //    });
+            // Add an option for default selection
+            banksNames.Insert(0, new SelectListItem
+            {
+                Text = "-- Select your bank --",
+                Value = ""
+            });
 
-        //    ViewBag.BanksNames = banksNames;
-        //    return View();
-        //}
+            ViewBag.BanksNames = banksNames;
+            return View();
+        }
 
         //[HttpPost]
         //public IActionResult UserAccount(UserAccountDto userAccountDto)
@@ -83,7 +83,7 @@ namespace ZadProject.Controllers
         //    _context.UserAccounts.Add(UserAccount);
         //    _context.SaveChanges();
 
-        //    return RedirectToAction("Login","Home");
+        //    return RedirectToAction("HomePage", "Home");
         //}
 
         [HttpGet]
@@ -112,52 +112,79 @@ namespace ZadProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult UploadOtherAuction(OtherAuction AuctionOther, IFormCollection form)
+        public async Task<IActionResult> UploadOtherAuction(OtherAuction auctionOther, IFormCollection form)
         {
             if (HttpContext.Session.GetInt32("UserId") == null)
             {
                 return RedirectToAction("Login", "Home");
             }
+
             TempData["UserId"] = HttpContext.Session.GetInt32("UserId");
             var image = form.Files["Auctionimage"];
+
             if (image != null && image.Length > 0)
             {
-                var fileName = Path.GetFileName(image.FileName);
-                var filePath = Path.Combine("wwwroot", "OtherAuctionImages", fileName);
-                using (var stream = new FileStream(filePath, FileMode.Create))
+                try
                 {
-                    image.CopyToAsync(stream);
+                    var fileName = Path.GetFileName(image.FileName);
+                    var fileExtension = Path.GetExtension(fileName).ToLower();
+
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+
+                    if (!allowedExtensions.Contains(fileExtension))
+                    {
+                        TempData["UploadMessageError"] = "Invalid image format. Allowed formats are .jpg, .jpeg, .png, .gif.";
+                        return View(auctionOther);
+                    }
+
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "OthersImages", fileName);
+
+                    if (!Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "OthersImages")))
+                    {
+                        Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "OthersImages"));
+                    }
+
+                    await using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await image.CopyToAsync(stream);
+                    }
+
+                    var newAuction = new OtherAuction()
+                    {
+                        AuctionCategory = auctionOther.AuctionCategory,
+                        AuctionCoverImage = fileName,
+                        AuctionDesctibtion = auctionOther.AuctionDesctibtion,
+                        AuctionStartDate = auctionOther.AuctionStartDate,
+                        AuctionEndDate = auctionOther.AuctionEndDate,
+                        AuctionProdutName = auctionOther.AuctionProdutName,
+                        AuctionStatus = Status.Pending,
+                        AuctionStartPrice = auctionOther.AuctionStartPrice,
+                        MinimunSalePrice = auctionOther.AuctionStartPrice,
+                        OwnerName = auctionOther.OwnerName,
+                        OwnerPhone = auctionOther.OwnerPhone,
+                        VideoLink = auctionOther.VideoLink ?? string.Empty,
+                    };
+
+                    _context.OtherAuctions.Add(newAuction);
+                    await _context.SaveChangesAsync();
+
+                    TempData["UploadMessage"] = "Your data has been uploaded successfully and you can see it here after the approval of admin.";
+                    return RedirectToAction("GetAllOtherAuctions");
                 }
-                var OtherAuction = new OtherAuction()
+                catch (Exception ex)
                 {
-                    AuctionCategory = AuctionOther.AuctionCategory,
-                    AuctionCoverImage = fileName.ToString(),
-                    AuctionDesctibtion = AuctionOther.AuctionDesctibtion,
-                    AuctionStartDate = AuctionOther.AuctionStartDate,
-                    AuctionEndDate = AuctionOther.AuctionEndDate,
-                    AuctionProdutName = AuctionOther.AuctionProdutName,
-                    AuctionStatus = Status.Pending,
-                    AuctionStartPrice = AuctionOther.AuctionStartPrice,
-                    MinimunSalePrice = AuctionOther.AuctionStartPrice,
-                    OwnerName = AuctionOther.OwnerName,
-                    OwnerPhone = AuctionOther.OwnerPhone,
-                    VideoLink = AuctionOther.VideoLink
-                    
-                };
-
-                _context.OtherAuctions.Add(OtherAuction);
-                _context.SaveChanges();
-                TempData["UploadMessage"] = "Your data has been Uploaded successfully and you can see it here after the approve of admin";
-                return RedirectToAction("GetAllOtherAuctions");
-
+                    // Log the exception
+                    TempData["UploadMessageError"] = "An error occurred while uploading the image. Please try again.";
+                    return View(auctionOther);
+                }
             }
             else
             {
-                TempData["UploadMessageError"] = "you should attach an image of the product you want to upload";
-                return View(AuctionOther);
+                TempData["UploadMessageError"] = "You should attach an image of the product you want to upload.";
+                return View(auctionOther);
             }
-
         }
+
 
         [HttpGet]
         public IActionResult UploadCarAuction()
@@ -169,69 +196,95 @@ namespace ZadProject.Controllers
             TempData["UserId"] = HttpContext.Session.GetInt32("UserId");
             var user = _context.Users.Where(a => a.UserId == HttpContext.Session.GetInt32("UserId")).FirstOrDefault();
             ViewBag.UserName = user.UserName;
-            ViewBag.UserPhone = user.UserPhone; 
+            ViewBag.UserPhone = user.UserPhone;
             return View();
         }
 
         [HttpPost]
-        public IActionResult UploadCarAuction(CarAuction AuctionCar, IFormCollection form)
-
+        public async Task<IActionResult> UploadCarAuction(CarAuction auctionCar, IFormCollection form)
         {
             if (HttpContext.Session.GetInt32("UserId") == null)
             {
                 return RedirectToAction("Login", "Home");
             }
+
             TempData["UserId"] = HttpContext.Session.GetInt32("UserId");
             var image = form.Files["AuctionImage"];
+
             if (image != null && image.Length > 0)
             {
-                var fileName = Path.GetFileName(image.FileName);
-                var filePath = Path.Combine("wwwroot", "CarAuctionImages", fileName);
-                using (var stream = new FileStream(filePath, FileMode.Create))
+                try
                 {
-                    image.CopyToAsync(stream);
+                    var fileName = Path.GetFileName(image.FileName);
+                    var fileExtension = Path.GetExtension(fileName).ToLower();
+
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+
+                    if (!allowedExtensions.Contains(fileExtension))
+                    {
+                        TempData["UploadMessageError"] = "Invalid image format. Allowed formats are .jpg, .jpeg, .png, .gif.";
+                        return View(auctionCar);
+                    }
+
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "CarsImages", fileName);
+
+                    if (!Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "CarsImages")))
+                    {
+                        Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "CarsImages"));
+                    }
+
+                    await using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await image.CopyToAsync(stream);
+                    }
+
+                    var newCarAuction = new CarAuction()
+                    {
+                        Colors = auctionCar.Colors,
+                        MinimunSalePrice = auctionCar.StartingPrice,
+                        AccidentBefore = auctionCar.AccidentBefore,
+                        AuctionEndDate = auctionCar.AuctionEndDate,
+                        AuctionImage = fileName,
+                        AuctionStartDate = auctionCar.AuctionStartDate,
+                        AuctionStatus = Status.Pending,
+                        CarModel = auctionCar.CarModel,
+                        Condition = auctionCar.Condition,
+                        FuelType = auctionCar.FuelType,
+                        NumberOfDoors = auctionCar.NumberOfDoors,
+                        StartingPrice = auctionCar.StartingPrice,
+                        TireCondition = auctionCar.TireCondition,
+                        TransmisssionType = auctionCar.TransmisssionType,
+                        YearOfManufacture = auctionCar.YearOfManufacture,
+                        AuctionType = "car",
+                        NOK = auctionCar.NOK,
+                        VideoLink = auctionCar.VideoLink ?? string.Empty,
+                        NumberOfOwner = auctionCar.NumberOfOwner,
+                        OwnerName = auctionCar.OwnerName,
+                        OwnerPhone = auctionCar.OwnerPhone,
+                        TechnicalInspection = auctionCar.TechnicalInspection,
+                        Warranty = auctionCar.Warranty
+                    };
+
+                    _context.CarAuctions.Add(newCarAuction);
+                    await _context.SaveChangesAsync();
+
+                    TempData["UploadMessage"] = "Your data has been uploaded successfully and you can see it here after the approval of admin.";
+                    return RedirectToAction("GetAllCarsAuctions");
                 }
-                var CarAuction = new CarAuction()
+                catch (Exception ex)
                 {
-                    Colors = AuctionCar.Colors,
-                    MinimunSalePrice = AuctionCar.StartingPrice,
-                    AccidentBefore = AuctionCar.AccidentBefore,
-                    AuctionEndDate = AuctionCar.AuctionEndDate,
-                    AuctionImage = fileName.ToString(),
-                    AuctionStartDate = AuctionCar.AuctionStartDate,
-                    AuctionStatus = Status.Pending,
-                    CarModel = AuctionCar.CarModel,
-                    Condition = AuctionCar.Condition,
-                    FuelType = AuctionCar.FuelType,
-                    NumberOfDoors = AuctionCar.NumberOfDoors,
-                    StartingPrice = AuctionCar.StartingPrice,
-                    TireCondition = AuctionCar.TireCondition,
-                    TransmisssionType = AuctionCar.TransmisssionType,
-                    YearOfManufacture = AuctionCar.YearOfManufacture,
-                    AuctionType = "car",
-                    NOK = AuctionCar.NOK,
-                    VideoLink = AuctionCar.VideoLink,
-                    NumberOfOwner = AuctionCar.NumberOfOwner,
-                    OwnerName = AuctionCar.OwnerName,
-                    OwnerPhone = AuctionCar.OwnerPhone,
-                    TechnicalInspection = AuctionCar.TechnicalInspection,
-                    Warranty = AuctionCar.Warranty
-                    
-                };
-
-                _context.CarAuctions.Add(CarAuction);
-                _context.SaveChanges();
-                TempData["UploadMessage"] = "Your data has been Uploaded successfully and you can see it here after the approve of admin";
-                return RedirectToAction("GetAllCarsAuctions");
-
+                    // Log the exception
+                    TempData["UploadMessageError"] = "An error occurred while uploading the image. Please try again.";
+                    return View(auctionCar);
+                }
             }
             else
             {
-                TempData["UploadMessageError"] = "you should attach an image of the product you want to upload";
-                return View(AuctionCar);
+                TempData["UploadMessageError"] = "You should attach an image of the product you want to upload.";
+                return View(auctionCar);
             }
-
         }
+
 
         [HttpGet]
         public IActionResult UploadRealStateAuction()
@@ -248,75 +301,104 @@ namespace ZadProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult UploadRealStateAuction(RealStateAuction AuctionRealState, IFormCollection form)
+        public async Task<IActionResult> UploadRealStateAuction(RealStateAuction auctionRealState, IFormCollection form)
         {
             if (HttpContext.Session.GetInt32("UserId") == null)
             {
                 return RedirectToAction("Login", "Home");
             }
+
             TempData["UserId"] = HttpContext.Session.GetInt32("UserId");
             var image = form.Files["AuctionImage"];
+
             if (image != null && image.Length > 0)
             {
-                var fileName = Path.GetFileName(image.FileName);
-                var filePath = Path.Combine("wwwroot", "RealStateAuctionImages", fileName);
-                using (var stream = new FileStream(filePath, FileMode.Create))
+                try
                 {
-                    image.CopyToAsync(stream);
+                    var fileName = Path.GetFileName(image.FileName);
+                    var fileExtension = Path.GetExtension(fileName).ToLower();
+
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+
+                    if (!allowedExtensions.Contains(fileExtension))
+                    {
+                        TempData["UploadMessageError"] = "Invalid image format. Allowed formats are .jpg, .jpeg, .png, .gif.";
+                        return View(auctionRealState);
+                    }
+
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "HousesImages", fileName);
+
+                    if (!Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "HousesImages")))
+                    {
+                        Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "HousesImages"));
+                    }
+
+                    await using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await image.CopyToAsync(stream);
+                    }
+
+                    var newRealStateAuction = new RealStateAuction()
+                    {
+                        MinimunSalePrice = auctionRealState.StartingPrice,
+                        HouseSize = auctionRealState.HouseSize,
+                        HouseAddress = auctionRealState.HouseAddress,
+                        Condition = auctionRealState.Condition,
+                        AuctionEndDate = auctionRealState.AuctionEndDate,
+                        AuctionImage = fileName,
+                        AuctionStartDate = auctionRealState.AuctionStartDate,
+                        AuctionStatus = Status.Pending,
+                        NumberOfBathrooms = auctionRealState.NumberOfBathrooms,
+                        NumberOfRooms = auctionRealState.NumberOfRooms,
+                        Parking = auctionRealState.Parking,
+                        StartingPrice = auctionRealState.StartingPrice,
+                        TypeOfProperty = auctionRealState.TypeOfProperty,
+                        YearOfBuild = auctionRealState.YearOfBuild,
+                        AuctionType = "RealState",
+                        OwnerPhone = auctionRealState.OwnerPhone,
+                        OwnerName = auctionRealState.OwnerName,
+                        NumberOfFloors = auctionRealState.NumberOfFloors,
+                        VideoLink = auctionRealState.VideoLink ?? string.Empty,
+                    };
+
+                    _context.RealStateAuctions.Add(newRealStateAuction);
+                    await _context.SaveChangesAsync();
+
+                    TempData["UploadMessage"] = "Your data has been uploaded successfully and you can see it here after the approval of admin.";
+                    return RedirectToAction("GetAllRealStateAuctions");
                 }
-                var RealStateAuction = new RealStateAuction()
+                catch (Exception ex)
                 {
-                    MinimunSalePrice = AuctionRealState.StartingPrice,
-                    HouseSize = AuctionRealState.HouseSize,
-                    HouseAddress = AuctionRealState.HouseAddress,
-                    Condition = AuctionRealState.Condition,
-                    AuctionEndDate = AuctionRealState.AuctionEndDate,
-                    AuctionImage = fileName.ToString(),
-                    AuctionStartDate = AuctionRealState.AuctionStartDate,
-                    AuctionStatus = Status.Pending,
-                    NumberOfBathrooms = AuctionRealState.NumberOfBathrooms,
-                    NumberOfRooms = AuctionRealState.NumberOfRooms,
-                    Parking = AuctionRealState.Parking,
-                    StartingPrice = AuctionRealState.StartingPrice,
-                    TypeOfProperty = AuctionRealState.TypeOfProperty,
-                    YearOfBuild = AuctionRealState.YearOfBuild,
-                    AuctionType = "RealState",
-                    OwnerPhone = AuctionRealState.OwnerPhone,
-                    OwnerName = AuctionRealState.OwnerName,
-                    NumberOfFloors = AuctionRealState.NumberOfFloors,
-                    VideoLink = AuctionRealState.VideoLink
-                    
-
-                };
-
-                _context.RealStateAuctions.Add(RealStateAuction);
-                _context.SaveChanges();
-                TempData["UploadMessage"] = "Your data has been Uploaded successfully and you can see it here after the approve of admin";
-
-                return RedirectToAction("GetAllRealStateAuctions");
-
+                    // Log the exception
+                    TempData["UploadMessageError"] = "An error occurred while uploading the image. Please try again.";
+                    return View(auctionRealState);
+                }
             }
             else
             {
-                TempData["UploadMessageError"] = "you should attach an image of the product you want to upload";
-                return View(AuctionRealState);
+                TempData["UploadMessageError"] = "You should attach an image of the product you want to upload.";
+                return View(auctionRealState);
             }
-
         }
 
+
         [HttpGet]
-        public IActionResult GetAllRealStateAuctions() 
+        public IActionResult GetAllRealStateAuctions()
         {
             if (HttpContext.Session.GetInt32("UserId") == null)
             {
-                return RedirectToAction("Login", "Home");
+                var AllRealStateAuctions = _context.RealStateAuctions.Where(a => a.AuctionStatus == Status.Accepted).ToList();
+                if(AllRealStateAuctions != null)
+                return View(AllRealStateAuctions);
+
+                return View();
             }
             TempData["UserId"] = HttpContext.Session.GetInt32("UserId");
             var user = _context.Users.FirstOrDefault(a => a.UserId == HttpContext.Session.GetInt32("UserId"));
-           
+
             var RealStateAuctions = _context.RealStateAuctions
                 .Where(a => a.AuctionStatus == Status.Accepted && a.OwnerName != user.UserName && a.OwnerPhone != user.UserPhone).ToList();
-            if(RealStateAuctions != null)
+            if (RealStateAuctions != null)
             {
                 return View(RealStateAuctions);
             }
@@ -385,7 +467,11 @@ namespace ZadProject.Controllers
         {
             if (HttpContext.Session.GetInt32("UserId") == null)
             {
-                return RedirectToAction("Login", "Home");
+                var AllCarAuctions = _context.CarAuctions.Where(a => a.AuctionStatus == Status.Accepted).ToList();
+                if (AllCarAuctions != null)
+                    return View(AllCarAuctions);
+
+                return View();
             }
             TempData["UserId"] = HttpContext.Session.GetInt32("UserId");
             var user = _context.Users.FirstOrDefault(a => a.UserId == HttpContext.Session.GetInt32("UserId"));
@@ -438,7 +524,7 @@ namespace ZadProject.Controllers
 
             }
 
-            
+
             var BidingOnCar = new BidingCarAuction()
             {
                 BidingDate = DateTime.Now,
@@ -461,7 +547,9 @@ namespace ZadProject.Controllers
         {
             if (HttpContext.Session.GetInt32("UserId") == null)
             {
-                return RedirectToAction("Login", "Home");
+                var AllOtherAuctions = _context.OtherAuctions.Where(a => a.AuctionStatus == Status.Accepted).ToList();
+                if (AllOtherAuctions != null)
+                    return View(AllOtherAuctions);
             }
             TempData["UserId"] = HttpContext.Session.GetInt32("UserId");
             var user = _context.Users.FirstOrDefault(a => a.UserId == HttpContext.Session.GetInt32("UserId"));
@@ -539,9 +627,9 @@ namespace ZadProject.Controllers
 
             var AllAuctions = new AllAuctions()
             {
-               CarAuction = _context.CarAuctions.Where(a => a.AuctionStatus == Status.Accepted).ToList(),
-               OtherAuction = _context.OtherAuctions.Where(a => a.AuctionStatus == Status.Accepted).ToList(),
-               RealStateAuction = _context.RealStateAuctions.Where(a => a.AuctionStatus == Status.Accepted).ToList()
+                CarAuction = _context.CarAuctions.Where(a => a.AuctionStatus == Status.Accepted).ToList(),
+                OtherAuction = _context.OtherAuctions.Where(a => a.AuctionStatus == Status.Accepted).ToList(),
+                RealStateAuction = _context.RealStateAuctions.Where(a => a.AuctionStatus == Status.Accepted).ToList()
             };
             if (AllAuctions.OtherAuction != null && AllAuctions.CarAuction != null && AllAuctions.RealStateAuction != null)
             {
@@ -672,9 +760,9 @@ namespace ZadProject.Controllers
             var UserDashboard = new UserDashboardViewModel()
             {
                 BidingNumber = BidingNumber,
-                BuyingNumber= BuyingNumber,
-                AllUserBiding= AllUserBiding,
-                AllUserBuying= AllUserBuying,
+                BuyingNumber = BuyingNumber,
+                AllUserBiding = AllUserBiding,
+                AllUserBuying = AllUserBuying,
                 User = UserDto,
                 UserCarAuctions = UserCarAuctions,
                 UserOtherAuctions = UserOtherAuctions,
@@ -685,7 +773,7 @@ namespace ZadProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult UserProfile(UserDto userDto, IFormCollection form)
+        public async Task<IActionResult> UserProfile(UserDto userDto, IFormCollection form)
         {
             if (HttpContext.Session.GetInt32("UserId") == null)
             {
@@ -696,55 +784,67 @@ namespace ZadProject.Controllers
             var image = form.Files["image"];
             if (image != null && image.Length > 0)
             {
-                var fileName = Path.GetFileName(image.FileName);
-                var filePath = Path.Combine("wwwroot", "UserImages", fileName);
-                using (var stream = new FileStream(filePath, FileMode.Create))
+                try
                 {
-                    image.CopyToAsync(stream);
+                    var fileName = Path.GetFileName(image.FileName);
+                    var fileExtension = Path.GetExtension(fileName).ToLower();
+
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+
+                    if (!allowedExtensions.Contains(fileExtension))
+                    {
+                        TempData["EditResult"] = "Invalid image format. Allowed formats are .jpg, .jpeg, .png, .gif.";
+                        return View(userDto);
+                    }
+
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "UserImages", fileName);
+
+                    if (!Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "UserImages")))
+                    {
+                        Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "UserImages"));
+                    }
+
+                    await using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await image.CopyToAsync(stream);
+                    }
+
+                    existingUser.NationalIdImage = fileName;
                 }
-
-                var user = new User()
+                catch (Exception ex)
                 {
-                    UserId = (int)HttpContext.Session.GetInt32("UserId"),
-                    NationalIdImage = fileName.ToString(),
-                    UserAddress = userDto.UserAddress,
-                    UserEmail = userDto.UserEmail,
-                    UserName = userDto.UserName,
-                    UserPassword = userDto.UserPassword,
-                    UserPhone = userDto.UserPhone,
-                };
-                _context.Users.Update(user);
-                _context.SaveChanges();
-                TempData["EditResult"] = "Your Profile Data Updated Successfully";
-                return RedirectToAction("UserDashboard");
-
+                    // Log the exception
+                    TempData["EditResult"] = "An error occurred while uploading the image. Please try again.";
+                    return View(userDto);
+                }
             }
-            else
-            {
-                existingUser.UserId = (int)HttpContext.Session.GetInt32("UserId");
-                existingUser.UserAddress = userDto.UserAddress;
-                existingUser.UserEmail = userDto.UserEmail;
-                existingUser.UserName = userDto.UserName;
-                existingUser.UserPassword = userDto.UserPassword;
-                existingUser.UserPhone = userDto.UserPhone;
-                existingUser.NationalIdImage = existingUser.NationalIdImage;
 
-                _context.Users.Update(existingUser);
-                _context.SaveChanges();
-                TempData["EditResult"] = "Your Profile Data Updated Successfully";
-                return RedirectToAction("UserDashboard");
-            }
+            existingUser.UserId = (int)HttpContext.Session.GetInt32("UserId");
+            existingUser.UserAddress = userDto.UserAddress;
+            existingUser.UserEmail = userDto.UserEmail;
+            existingUser.UserName = userDto.UserName;
+            existingUser.UserPassword = userDto.UserPassword;
+            existingUser.UserPhone = userDto.UserPhone;
+            existingUser.NationalIdImage = existingUser.NationalIdImage;
+
+            _context.Users.Update(existingUser);
+            _context.SaveChanges();
+            TempData["EditResult"] = "Your Profile Data Updated Successfully";
+            return RedirectToAction("UserDashboard");
         }
+
 
         [HttpPost]
         public IActionResult EndAuction(int auctionId, string auctionType)
         {
-            if(auctionType == "Car")
+            if (auctionType == "Car")
             {
                 try
                 {
                     var WantedAuction = _context.CarAuctions.Where(a => a.CarAuctionId == auctionId).FirstOrDefault();
                     WantedAuction.AuctionStatus = Status.Complete;
+                    _context.CarAuctions.Update(WantedAuction);
+                    _context.SaveChanges();
                     var WinnerBidding = _context.BidingCarAuctions.Where(a => a.CarAuctionId == auctionId).OrderByDescending(a => a.BidingPrice).First();
                     var WinnerUser = _context.Users.Where(a => a.UserId == WinnerBidding.UserId).First();
                     var NewPurchaseRecord = new BuyingCarAuction()
@@ -752,7 +852,6 @@ namespace ZadProject.Controllers
                         CarAuctionId = auctionId,
                         UserId = WinnerUser.UserId
                     };
-                    _context.CarAuctions.Update(WantedAuction);
                     _context.BuyingCarAuctions.Add(NewPurchaseRecord);
                     _context.SaveChanges();
                     return Json(new { success = true });
@@ -763,12 +862,14 @@ namespace ZadProject.Controllers
                     return Json(new { success = false });
                 }
             }
-            else if(auctionType == "House")
+            else if (auctionType == "House")
             {
                 try
                 {
                     var WantedAuction = _context.RealStateAuctions.Where(a => a.RealStateAuctionId == auctionId).FirstOrDefault();
                     WantedAuction.AuctionStatus = Status.Complete;
+                    _context.RealStateAuctions.Update(WantedAuction);
+                    _context.SaveChanges();
                     var WinnerBidding = _context.BidingRealStateAuctions.Where(a => a.RealStateAuctionId == auctionId).OrderByDescending(a => a.BidingPrice).First();
                     var WinnerUser = _context.Users.Where(a => a.UserId == WinnerBidding.UserId).First();
                     var NewPurchaseRecord = new BuyingRealStateAuction()
@@ -776,7 +877,6 @@ namespace ZadProject.Controllers
                         RealStateAuctinoId = auctionId,
                         UserId = WinnerUser.UserId
                     };
-                    _context.RealStateAuctions.Update(WantedAuction);
                     _context.BuyingRealStateAuctions.Add(NewPurchaseRecord);
                     _context.SaveChanges();
                     return Json(new { success = true });
@@ -793,6 +893,8 @@ namespace ZadProject.Controllers
                 {
                     var WantedAuction = _context.OtherAuctions.Where(a => a.OtherAuctionId == auctionId).FirstOrDefault();
                     WantedAuction.AuctionStatus = Status.Complete;
+                    _context.OtherAuctions.Update(WantedAuction);
+                    _context.SaveChanges();
                     var WinnerBidding = _context.BidingOtherAuctions.Where(a => a.OtherAuctionId == auctionId).OrderByDescending(a => a.BidingPrice).First();
                     var WinnerUser = _context.Users.Where(a => a.UserId == WinnerBidding.UserId).First();
                     var NewPurchaseRecord = new BuyingOtherAuction()
@@ -800,7 +902,6 @@ namespace ZadProject.Controllers
                         OtherAuctionId = auctionId,
                         UserId = WinnerUser.UserId
                     };
-                    _context.OtherAuctions.Update(WantedAuction);
                     _context.BuyingOtherAuctions.Add(NewPurchaseRecord);
                     _context.SaveChanges();
                     return Json(new { success = true });

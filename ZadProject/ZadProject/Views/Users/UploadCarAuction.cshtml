@@ -127,6 +127,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="/Users/UploadAuction" class="dropdown-item">Upload Auctions</a>
+                                <a href="/Users/UserAccount" class="dropdown-item">Payment</a>
                             </div>
                         </div>
                         <a href="/Home/HowItWork" class="nav-item nav-link">H.I.W</a>
@@ -164,8 +165,8 @@
                     <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Select</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-transparent card-hover transition duration-300 cursor-pointer" onclick="location.href='/Users/UploadRealStateAuction'">
-                    <h2 class="text-2xl font-semibold mb-4">House</h2>
-                    <p class="mb-4">Auction your house to find the best buyer.</p>
+                    <h2 class="text-2xl font-semibold mb-4">Real State</h2>
+                    <p class="mb-4">Auction your real state to find the best buyer.</p>
                     <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Select</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-transparent card-hover transition duration-300 cursor-pointer" onclick="location.href='Users/UploadOtherAuction'">
@@ -273,7 +274,7 @@
 
                 <div class="mb-4">
                     <label for="video-link" class="block text-sm font-medium text-gray-700">Video Link</label>
-                    <input type="text"  required id="video-link" name="VideoLink" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the video link">
+                    <input type="text" id="video-link" name="VideoLink" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the video link">
                     <span asp-validation-for="VideoLink" class="text-danger"></span>
                 </div>
 

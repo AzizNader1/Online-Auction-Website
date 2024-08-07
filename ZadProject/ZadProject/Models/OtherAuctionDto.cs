@@ -41,6 +41,6 @@ namespace ZadProject.Models
         public string OwnerPhone { get; set; }
         [Display(Name = "VideoLink")]
         [Required(ErrorMessage = "this field is required")]
-        public string VideoLink { get; set; }
+        public string? VideoLink { get; set; }
     }
 }

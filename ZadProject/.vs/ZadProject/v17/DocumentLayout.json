@@ -1,86 +1,118 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\AIO\\source\\repos\\ZadProject\\",
+  "WorkspaceRootPath": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\views\\home\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\home\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\views\\requests\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\requests\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\views\\home\\howitwork.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\home\\howitwork.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\views\\requests\\getallbanks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\requests\\getallbanks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\views\\admins\\userdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\admins\\userdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\views\\requests\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\requests\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\views\\requests\\deletebank.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\requests\\deletebank.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\views\\admins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\admins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\views\\home\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\home\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Controllers\\RequestsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\views\\requests\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\requests\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\views\\requests\\addbank.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\views\\requests\\addbank.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\models\\useraccountdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\models\\useraccountdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\models\\useraccountdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\models\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\models\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\models\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\models\\auctiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\models\\auctiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\models\\bankdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\models\\bankdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\models\\buyingauction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\models\\buyingauction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\models\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\models\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\models\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\models\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|d:\\zadproject\\zadproject\\zadproject\\zadproject\\zadproject\\models\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\models\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|c:\\users\\aio\\source\\repos\\zadproject\\zadproject\\migrations\\20240314160139_updating the tables data inside the models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AF288E5-C478-4412-8484-3F69673FD16B}|ZadProject\\ZadProject.csproj|solutionrelative:zadproject\\migrations\\20240314160139_updating the tables data inside the models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\AddUser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\Edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\DeleteBank.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\HomePage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\AddBank.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\GetAllBanks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\BuyingAuction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\Auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\AuctionDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\BankDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Migrations\\20240314160139_updating the tables data inside the models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,119 +122,234 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddUser.cshtml",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\AddUser.cshtml",
-              "RelativeDocumentMoniker": "ZadProject\\Views\\Requests\\AddUser.cshtml",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\AddUser.cshtml",
-              "RelativeToolTip": "ZadProject\\Views\\Requests\\AddUser.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAwAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T19:32:01.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ZadProject\\Views\\Requests\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\Edit.cshtml",
-              "RelativeToolTip": "ZadProject\\Views\\Requests\\Edit.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "ZadProject\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "ZadProject\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T19:15:48.677Z",
+              "WhenOpened": "2024-07-10T12:03:04.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "DeleteBank.cshtml",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\DeleteBank.cshtml",
-              "RelativeDocumentMoniker": "ZadProject\\Views\\Requests\\DeleteBank.cshtml",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\DeleteBank.cshtml",
-              "RelativeToolTip": "ZadProject\\Views\\Requests\\DeleteBank.cshtml",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAzwBYAAAAwAAAA",
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "ZadProject\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "ZadProject\\Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T18:55:13.896Z",
+              "WhenOpened": "2024-07-10T12:03:02.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserDetails.cshtml",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Admins\\UserDetails.cshtml",
+              "RelativeDocumentMoniker": "ZadProject\\Views\\Admins\\UserDetails.cshtml",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Admins\\UserDetails.cshtml",
+              "RelativeToolTip": "ZadProject\\Views\\Admins\\UserDetails.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T12:02:15.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Admins\\Index.cshtml",
+              "RelativeDocumentMoniker": "ZadProject\\Views\\Admins\\Index.cshtml",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Admins\\Index.cshtml",
+              "RelativeToolTip": "ZadProject\\Views\\Admins\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T12:01:42.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AboutUs.cshtml",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Home\\AboutUs.cshtml",
+              "RelativeDocumentMoniker": "ZadProject\\Views\\Home\\AboutUs.cshtml",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Home\\AboutUs.cshtml",
+              "RelativeToolTip": "ZadProject\\Views\\Home\\AboutUs.cshtml",
+              "ViewState": "AQIAAKwAAAAAAAAAAAAAAL0AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T11:46:57.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SignUp.cshtml",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Home\\SignUp.cshtml",
+              "RelativeDocumentMoniker": "ZadProject\\Views\\Home\\SignUp.cshtml",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Home\\SignUp.cshtml",
+              "RelativeToolTip": "ZadProject\\Views\\Home\\SignUp.cshtml",
+              "ViewState": "AQIAAK4AAAAAAAAAAAAwwMwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T11:13:30.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "login.cshtml",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Home\\login.cshtml",
+              "RelativeDocumentMoniker": "ZadProject\\Views\\Home\\login.cshtml",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Home\\login.cshtml",
+              "RelativeToolTip": "ZadProject\\Views\\Home\\login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T11:12:53.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomePage.cshtml",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Home\\HomePage.cshtml",
+              "RelativeDocumentMoniker": "ZadProject\\Views\\Home\\HomePage.cshtml",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Home\\HomePage.cshtml",
+              "RelativeToolTip": "ZadProject\\Views\\Home\\HomePage.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAD8AAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T11:08:29.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HowItWork.cshtml",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Home\\HowItWork.cshtml",
+              "RelativeDocumentMoniker": "ZadProject\\Views\\Home\\HowItWork.cshtml",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Home\\HowItWork.cshtml",
+              "RelativeToolTip": "ZadProject\\Views\\Home\\HowItWork.cshtml",
+              "ViewState": "AQIAAMMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T12:04:31.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "bootstrap.css",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "RelativeDocumentMoniker": "ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "RelativeToolTip": "ZadProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-10T11:07:28.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ZadProject\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ZadProject\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAwwBAAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T11:05:48.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AddUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\AddUser.cshtml",
+              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\AddUser.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T19:32:01.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\Edit.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T19:15:48.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DeleteBank.cshtml",
+              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\DeleteBank.cshtml",
+              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\DeleteBank.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T18:55:13.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Program.cs",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Program.cs",
               "RelativeDocumentMoniker": "ZadProject\\Program.cs",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Program.cs",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Program.cs",
               "RelativeToolTip": "ZadProject\\Program.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAACYAAABDAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAIBJwCYAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T18:43:22.66Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 23,
               "Title": "HomePage.cshtml",
               "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\HomePage.cshtml",
-              "RelativeDocumentMoniker": "ZadProject\\Views\\Requests\\HomePage.cshtml",
               "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\HomePage.cshtml",
-              "RelativeToolTip": "ZadProject\\Views\\Requests\\HomePage.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T18:43:09.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-15T18:43:09.333Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 24,
               "Title": "AddBank.cshtml",
               "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\AddBank.cshtml",
-              "RelativeDocumentMoniker": "ZadProject\\Views\\Requests\\AddBank.cshtml",
               "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\AddBank.cshtml",
-              "RelativeToolTip": "ZadProject\\Views\\Requests\\AddBank.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T18:38:32.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-15T18:38:32.977Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "RequestsController.cs",
               "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Controllers\\RequestsController.cs",
-              "RelativeDocumentMoniker": "ZadProject\\Controllers\\RequestsController.cs",
               "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Controllers\\RequestsController.cs",
-              "RelativeToolTip": "ZadProject\\Controllers\\RequestsController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAqwBUAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T18:24:22.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-15T18:24:22.906Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 25,
               "Title": "GetAllBanks.cshtml",
               "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\GetAllBanks.cshtml",
-              "RelativeDocumentMoniker": "ZadProject\\Views\\Requests\\GetAllBanks.cshtml",
               "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Views\\Requests\\GetAllBanks.cshtml",
-              "RelativeToolTip": "ZadProject\\Views\\Requests\\GetAllBanks.cshtml",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAzwBYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T18:50:06.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-15T18:50:06.19Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\appsettings.json",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\appsettings.json",
               "RelativeDocumentMoniker": "ZadProject\\appsettings.json",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\appsettings.json",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\appsettings.json",
               "RelativeToolTip": "ZadProject\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -211,24 +358,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "UserAccountDetailsDto.cs",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\UserAccountDetailsDto.cs",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Models\\UserAccountDetailsDto.cs",
               "RelativeDocumentMoniker": "ZadProject\\Models\\UserAccountDetailsDto.cs",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\UserAccountDetailsDto.cs",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Models\\UserAccountDetailsDto.cs",
               "RelativeToolTip": "ZadProject\\Models\\UserAccountDetailsDto.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAA3wBcAAAAnAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA1wBcAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T18:19:03.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "UserAccount.cs",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\UserAccount.cs",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Models\\UserAccount.cs",
               "RelativeDocumentMoniker": "ZadProject\\Models\\UserAccount.cs",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\UserAccount.cs",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Models\\UserAccount.cs",
               "RelativeToolTip": "ZadProject\\Models\\UserAccount.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -237,11 +384,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\User.cs",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Models\\User.cs",
               "RelativeDocumentMoniker": "ZadProject\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\User.cs",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Models\\User.cs",
               "RelativeToolTip": "ZadProject\\Models\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -250,11 +397,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\UserDto.cs",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Models\\UserDto.cs",
               "RelativeDocumentMoniker": "ZadProject\\Models\\UserDto.cs",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\UserDto.cs",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Models\\UserDto.cs",
               "RelativeToolTip": "ZadProject\\Models\\UserDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -263,63 +410,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 26,
               "Title": "BuyingAuction.cs",
               "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\BuyingAuction.cs",
-              "RelativeDocumentMoniker": "ZadProject\\Models\\BuyingAuction.cs",
               "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\BuyingAuction.cs",
-              "RelativeToolTip": "ZadProject\\Models\\BuyingAuction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T15:57:07.503Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-14T15:57:07.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Auction.cs",
+              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\Auction.cs",
+              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\Auction.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T15:55:56.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AuctionDto.cs",
+              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\AuctionDto.cs",
+              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\AuctionDto.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T15:55:51.878Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Auction.cs",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\Auction.cs",
-              "RelativeDocumentMoniker": "ZadProject\\Models\\Auction.cs",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\Auction.cs",
-              "RelativeToolTip": "ZadProject\\Models\\Auction.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAqwDUAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T15:55:56.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AuctionDto.cs",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\AuctionDto.cs",
-              "RelativeDocumentMoniker": "ZadProject\\Models\\AuctionDto.cs",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\AuctionDto.cs",
-              "RelativeToolTip": "ZadProject\\Models\\AuctionDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T15:55:51.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "UserAccountDto.cs",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\UserAccountDto.cs",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Models\\UserAccountDto.cs",
               "RelativeDocumentMoniker": "ZadProject\\Models\\UserAccountDto.cs",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\UserAccountDto.cs",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Models\\UserAccountDto.cs",
               "RelativeToolTip": "ZadProject\\Models\\UserAccountDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAwwBMAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAwwBMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T16:00:47.581Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Bank.cs",
-              "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\Bank.cs",
+              "DocumentMoniker": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Models\\Bank.cs",
               "RelativeDocumentMoniker": "ZadProject\\Models\\Bank.cs",
-              "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\Bank.cs",
+              "ToolTip": "D:\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\Models\\Bank.cs",
               "RelativeToolTip": "ZadProject\\Models\\Bank.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -328,29 +463,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 29,
               "Title": "BankDto.cs",
               "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\BankDto.cs",
-              "RelativeDocumentMoniker": "ZadProject\\Models\\BankDto.cs",
               "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Models\\BankDto.cs",
-              "RelativeToolTip": "ZadProject\\Models\\BankDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T15:55:26.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-14T15:55:26.884Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 30,
               "Title": "20240314160139_updating the tables data inside the models.cs",
               "DocumentMoniker": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Migrations\\20240314160139_updating the tables data inside the models.cs",
-              "RelativeDocumentMoniker": "ZadProject\\Migrations\\20240314160139_updating the tables data inside the models.cs",
               "ToolTip": "C:\\Users\\AIO\\source\\repos\\ZadProject\\ZadProject\\Migrations\\20240314160139_updating the tables data inside the models.cs",
-              "RelativeToolTip": "ZadProject\\Migrations\\20240314160139_updating the tables data inside the models.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T16:01:39.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-14T16:01:39.474Z"
             }
           ]
         }

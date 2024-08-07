@@ -10,7 +10,7 @@
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100 h-96 object-cover rounded-lg" src="/CarAuctionImages/@Model.AuctionImage" alt="First slide">
+                        <img class="d-block w-100 h-96 object-cover rounded-lg" src="~/HousesImages/@Model.AuctionImage" alt="First slide">
                     </div>
                 </div>
             </div>
@@ -31,8 +31,9 @@
                 <p class="detail-title">House Size: <span class="detail-value">@Model.HouseSize</span></p>
                 <p class="detail-title">Condition: <span class="detail-value">@Model.Condition</span></p>
                 <p class="detail-title">Year Of Build: <span class="detail-value">@Model.YearOfBuild</span></p>
-                <p class="detail-title">Owner Name: <span class="detail-value">@Model.OwnerName</span></p>
-                <p class="detail-title">Owner Phone: <span class="detail-value">@Model.OwnerPhone</span></p>
+                <p class="detail-title">Video Link: <span class="detail-value">@Url.Content(Model.VideoLink)</span></p>
+                <p class="detail-title">Winner Name: <span class="detail-value">@Model.OwnerName</span></p>
+                <p class="detail-title">Winner Phone: <span class="detail-value">@Model.OwnerPhone</span></p>
             </div>
             <div class="flex justify-end space-x-4 mt-8">
                 <a href="/Admins/CompletedAuctions" class="details-button bg-blue-500 text-white p-3 rounded transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-400" data-type="car">Back To All</a>

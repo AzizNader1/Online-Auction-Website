@@ -15,7 +15,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 1200px;
             margin: 0;
         }
 
@@ -185,8 +185,13 @@
         }
 
         }
+
+        .btn {
+            margin: 15px
+        }
     </style>
 </head>
+
 <body>
     <div class="card-form-container">
         <form method="post" class="card-form" id="cardForm" enctype="multipart/form-data" asp-action="UserAccount" asp-controller="Users">
@@ -245,7 +250,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary w-100">Save</button>
-            <a class="btn btn-primary w-100" href="~/Home/HomePage">Cancle</a>
+            <a class="btn btn-primary w-100" href="~/Home/HomePage">Cancel</a>
         </form>
     </div>
 
@@ -267,90 +272,91 @@
     <script src="https://cdn.jsdelivr.net/npm/validator@13.6.0/validator.min.js"></script>
     <script>
 
-        // document.getElementById('cardForm').addEventListener('submit', function (event) {
-        //     event.preventDefault();
+        document.getElementById('cardForm').addEventListener('submit', function (event) {
+            event.preventDefault();
 
-        //     const cardNumber = document.getElementById('card-number').value;
-        //     const expiryDate = document.getElementById('expiry-date').value;
-        //     const cvv = document.getElementById('cvv').value;
-        //     const cardHolder = document.getElementById('card-holder').value;
-        //     const cardBalance = document.getElementById('card-balance').value;
+            const cardNumber = document.getElementById('card-number').value;
+            const expiryDate = document.getElementById('expiry-date').value;
+            const cvv = document.getElementById('cvv').value;
+            const cardHolder = document.getElementById('card-holder').value;
+            const cardBalance = document.getElementById('card-balance').value;
 
-        //     let isValid = true;
+            let isValid = true;
 
-        //     if (!validateCardNumber(cardNumber)) {
-        //         showError('card-number-error', 'Invalid card number');
-        //         isValid = false;
-        //     } else {
-        //         clearError('card-number-error');
-        //     }
+            if (!validateCardNumber(cardNumber)) {
+                showError('card-number-error', 'Invalid card number');
+                isValid = false;
+            } else {
+                clearError('card-number-error');
+            }
 
-        //     if (!validateExpiryDate(expiryDate)) {
-        //         showError('expiry-date-error', 'Invalid expiry date');
-        //         isValid = false;
-        //     } else {
-        //         clearError('expiry-date-error');
-        //     }
+            if (!validateExpiryDate(expiryDate)) {
+                showError('expiry-date-error', 'Invalid expiry date');
+                isValid = false;
+            } else {
+                clearError('expiry-date-error');
+            }
 
-        //     if (!validateCVV(cvv)) {
-        //         showError('cvv-error', 'Invalid CVV');
-        //         isValid = false;
-        //     } else {
-        //         clearError('cvv-error');
-        //     }
+            if (!validateCVV(cvv)) {
+                showError('cvv-error', 'Invalid CVV');
+                isValid = false;
+            } else {
+                clearError('cvv-error');
+            }
 
-        //     if (!validateCardHolderName(cardHolder)) {
-        //         showError('card-holder-error', 'Card holder name must contain only letters');
-        //         isValid = false;
-        //     } else {
-        //         clearError('card-holder-error');
-        //     }
-
-
-        //     if (isValid) {
-        //         document.getElementById('loading-spinner').style.display = 'block';
-        //         setTimeout(function () {
-        //             document.getElementById('loading-spinner').style.display = 'none';
-        //             document.getElementById('success-message').textContent = "Card saved successfully!";
-        //             showModal(cardNumber, cardHolder, expiryDate);
-        //         }, 2000);
-        //     }
-        // });
-
-        // function validateCardNumber(number) {
-        //     const regex = /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/;
-        //     return regex.test(number);
-        // }
-
-        // function validateExpiryDate(date) {
-        //     const regex = /^(0[1-9]|1[0-2])\/\d{2}$/;
-        //     if (!regex.test(date)) {
-        //         return false;
-        //     }
-        //     const [month, year] = date.split('/');
-        //     const expiry = new Date(`20${year}`, month);
-        //     const now = new Date();
-        //     return expiry > now;
-        // }
-
-        // function validateCVV(cvv) {
-        //     const regex = /^\d{3}$/;
-        //     return regex.test(cvv);
-        // }
-
-        // function validateCardHolderName(name) {
-        //     const regex = /^[a-zA-Z\s]+$/;
-        //     return regex.test(name);
-        // }
+            if (!validateCardHolderName(cardHolder)) {
+                showError('card-holder-error', 'Card holder name must contain only letters');
+                isValid = false;
+            } else {
+                clearError('card-holder-error');
+            }
 
 
-        // function showError(id, message) {
-        //     document.getElementById(id).textContent = message + ' Please check and try again.';
-        // }
+            if (isValid) {
+                alert("Your card has been saved successfully!"); // Add the alert here
+                document.getElementById('loading-spinner').style.display = 'block';
+                setTimeout(function () {
+                    document.getElementById('loading-spinner').style.display = 'none';
+                    document.getElementById('success-message').textContent = "Card saved successfully!";
+                    showModal(cardNumber, cardHolder, expiryDate);
+                }, 2000);
+            }
+        });
 
-        // function clearError(id) {
-        //     document.getElementById(id).textContent = '';
-        // }
+        function validateCardNumber(number) {
+            const regex = /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/;
+            return regex.test(number);
+        }
+
+        function validateExpiryDate(date) {
+            const regex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+            if (!regex.test(date)) {
+                return false;
+            }
+            const [month, year] = date.split('/');
+            const expiry = new Date(`20${year}`, month);
+            const now = new Date();
+            return expiry > now;
+        }
+
+        function validateCVV(cvv) {
+            const regex = /^\d{3}$/;
+            return regex.test(cvv);
+        }
+
+        function validateCardHolderName(name) {
+            const regex = /^[a-zA-Z\s]+$/;
+            return regex.test(name);
+        }
+
+
+        function showError(id, message) {
+            document.getElementById(id).textContent = message + ' Please check and try again.';
+        }
+
+        function clearError(id) {
+            document.getElementById(id).textContent = '';
+        }
 
         function showModal(cardNumber, cardHolder, expiryDate) {
             document.getElementById('preview-card-number').textContent = cardNumber || '•••• •••• •••• ••••';

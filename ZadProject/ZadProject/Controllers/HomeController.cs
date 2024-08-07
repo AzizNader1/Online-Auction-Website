@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Server.IIS;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Text;
 using ZadProject.Data;
 using ZadProject.Models;
+using System.Security.Cryptography;
 
 namespace ZadProject.Controllers
 {
@@ -18,7 +20,16 @@ namespace ZadProject.Controllers
         [HttpGet]
         public IActionResult HowItWork()
         {
-             return View();
+            if (HttpContext.Session.GetInt32("UserId") == null)
+            {
+
+                TempData["UserId"] = null;
+            }
+            else
+            {
+                TempData["UserId"] = HttpContext.Session.GetInt32("UserId");
+            }
+            return View();
         }
 
         [HttpGet]
@@ -73,10 +84,10 @@ namespace ZadProject.Controllers
                 {
                     return RedirectToAction("Index", "Admins");
                 }
-                var users = _context.Users.Where(z => z.UserEmail == loginUserDto.UserEmail && z.UserPassword == loginUserDto.UserPassword).FirstOrDefault();
+                var users = _context.Users.Where(z => z.UserEmail == loginUserDto.UserEmail && z.UserPassword == HashPassword(loginUserDto.UserPassword)).FirstOrDefault();
                 if (users != null)
                 {
-                    if (loginUserDto.UserEmail == users.UserEmail && loginUserDto.UserPassword == users.UserPassword)
+                    if (loginUserDto.UserEmail == users.UserEmail && HashPassword(loginUserDto.UserPassword) == users.UserPassword)
                     {
 
                         HttpContext.Session.SetInt32("UserId", users.UserId);
@@ -121,11 +132,12 @@ namespace ZadProject.Controllers
                 {
                     image.CopyToAsync(stream);
                 }
+                
                 var user = new User();
                 user.NationalIdImage = fileName.ToString();
                 user.UserPhone = userDto.UserPhone;
                 user.UserName = userDto.UserName;
-                user.UserPassword = userDto.UserPassword;
+                user.UserPassword = HashPassword(userDto.UserPassword);
                 
                 user.UserEmail = userDto.UserEmail;
                 user.UserAddress = userDto.UserAddress;
@@ -152,5 +164,17 @@ namespace ZadProject.Controllers
             return RedirectToAction("HomePage");
         }
 
+        private static string HashPassword(string password)
+        {
+            byte[] passBytes = Encoding.UTF8.GetBytes(password);
+            byte[] hashBytes = new MD5CryptoServiceProvider().ComputeHash(passBytes);
+
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < hashBytes.Length; i++)
+            {
+                stringBuilder.Append(hashBytes[i].ToString("x2"));
+            }
+            return stringBuilder.ToString();
+        }
     }
 }

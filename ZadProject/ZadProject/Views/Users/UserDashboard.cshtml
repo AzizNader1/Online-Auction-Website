@@ -233,7 +233,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Auctions</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="/Users/GetAllRealStateAuctions" class="dropdown-item">Real Estate</a>
-                                <a href="/Users/GetAllCarAuctions" class="dropdown-item">Vehicles</a>
+                                <a href="/Users/GetAllCarsAuctions" class="dropdown-item">Vehicles</a>
                                 <a href="/Users/GetAllOtherAuctions" class="dropdown-item">Others</a>
                             </div>
                         </div>
@@ -241,6 +241,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="/Users/UploadAuction" class="dropdown-item">Upload Auctions</a>
+                                <a href="/Users/UserAccount" class="dropdown-item">Payment</a>
                             </div>
                         </div>
                         <a href="/Home/HowItWork" class="nav-item nav-link">H.I.W</a>
@@ -336,7 +337,7 @@
                                 @foreach (var item in Model.AllUserBiding.BidingCarAuctionDto)
                                 {
                                     <tr>
-                                        <td><img src="/CarAuctionImages/@item.CarAuction.AuctionImage" alt="Image" width="50"></td>
+                                        <td><img src="~/CarsImages/@item.CarAuction.AuctionImage" alt="Image" width="50"></td>
                                         <td>@item.BidingCarAuction.BidingPrice</td>
                                         <td>@item.BidingCarAuction.BidingDate</td>
                                     </tr>
@@ -344,7 +345,7 @@
                                 @foreach (var item in Model.AllUserBiding.BidingOtherAuctionDto)
                                 {
                                     <tr>
-                                        <td><img src="/OtherAuctionImages/@item.OtherAuction.AuctionCoverImage" alt="Image" width="50"></td>
+                                        <td><img src="~/OthersImages/@item.OtherAuction.AuctionCoverImage" alt="Image" width="50"></td>
                                         <td>@item.BidingOtherAuction.BidingPrice</td>
                                         <td>@item.BidingOtherAuction.BidingDate</td>
                                     </tr>
@@ -352,7 +353,7 @@
                                 @foreach (var item in Model.AllUserBiding.BidingRealStateAuctionDto)
                                 {
                                     <tr>
-                                        <td><img src="/RealStateAuctionImages/@item.RealStateAuction.AuctionImage" alt="Image" width="50"></td>
+                                        <td><img src="~/HousesImages/@item.RealStateAuction.AuctionImage" alt="Image" width="50"></td>
                                         <td>@item.BidingRealStateAuction.BidingPrice</td>
                                         <td>@item.BidingRealStateAuction.BidingDate</td>
                                     </tr>
@@ -387,7 +388,7 @@
                                     <tr>
                                         <td>@item.CarAuction.OwnerName</td>
                                         <td>@item.CarAuction.OwnerPhone</td>
-                                        <td><img src="/CarAuctionImages/@item.CarAuction.AuctionImage" alt="Image" width="50"></td>
+                                        <td><img src="~/CarsImages/@item.CarAuction.AuctionImage" alt="Image" width="50"></td>
                                     </tr>
                                 }
                                 @foreach (var item in Model.AllUserBuying.BuyingOtherAuctionDto)
@@ -395,7 +396,7 @@
                                     <tr>
                                         <td>@item.OtherAuction.OwnerName</td>
                                         <td>@item.OtherAuction.OwnerPhone</td>
-                                        <td><img src="/OtherAuctionImages/@item.OtherAuction.AuctionCoverImage" alt="Image" width="50"></td>
+                                        <td><img src="~/OthersImages/@item.OtherAuction.AuctionCoverImage" alt="Image" width="50"></td>
                                     </tr>
                                 }
                                 @foreach (var item in Model.AllUserBuying.BuyingRealStateAuctionDto)
@@ -403,7 +404,7 @@
                                     <tr>
                                         <td>@item.RealStateAuction.OwnerName</td>
                                         <td>@item.RealStateAuction.OwnerPhone</td>
-                                        <td><img src="/RealStateAuctionImages/@item.RealStateAuction.AuctionImage" alt="Image" width="50"></td>
+                                        <td><img src="~/HousesImages/@item.RealStateAuction.AuctionImage" alt="Image" width="50"></td>
                                     </tr>
                                 }
 
@@ -445,7 +446,7 @@
                                         <td>@item.AuctionEndDate</td>
                                         <td>@item.MinimunSalePrice</td>
                                         <td>@item.Warranty</td>
-                                        <td><img src="/CarAuctionImages/@item.AuctionImage" alt="Image" width="50"></td>
+                                        <td><img src="~/CarsImages/@item.AuctionImage" alt="Image" width="50"></td>
                                         <td>@item.AuctionStatus</td>
                                     </tr>
                                 }
@@ -487,7 +488,7 @@
                                         <td>@item.AuctionEndDate</td>
                                         <td>@item.StartingPrice</td>
                                         <td>@item.NumberOfFloors</td>
-                                        <td><img src="/RealStateAuctionImages/@item.AuctionImage" alt="Image" width="50"></td>
+                                        <td><img src="~/HousesImages/@item.AuctionImage" alt="Image" width="50"></td>
                                         <td>@item.AuctionStatus</td>
                                     </tr>
                                 }
@@ -529,7 +530,7 @@
                                         <td>@item.AuctionStartDate</td>
                                         <td>@item.AuctionEndDate</td>
                                         <td>@item.AuctionStartPrice</td>
-                                        <td><img src="/OtherAuctionImages/@item.AuctionCoverImage" alt="Image" width="50"></td>
+                                        <td><img src="~/OthersImages/@item.AuctionCoverImage" alt="Image" width="50"></td>
                                         <td>@item.AuctionStatus</td>
                                     </tr>
                                 }

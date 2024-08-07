@@ -209,6 +209,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 m-0">
                             <a href="/Users/UploadAuction" class="dropdown-item">Upload Auctions</a>
+                            <a href="/Users/UserAccount" class="dropdown-item">Payment</a>
                         </div>
                     </div>
                     <a href="/Home/HowItWork" class="nav-item nav-link">H.I.W</a>
@@ -235,22 +236,28 @@
         <div class="progress-bar" id="progress-bar"></div>
     </div>
     <main class="container mx-auto p-4">
-        <div class="header-container bg-gradient text-white rounded-lg mb-8 w-full max-w-2xl mx-auto">
+        <div class="header-container bg-gradient text-blue rounded-lg mb-8 w-full max-w-2xl mx-auto">
             <h1 class="header-title animate__animated animate__fadeInDown">How It Works</h1>
         </div>
         <div class="flex flex-col items-center space-y-8 relative">
             <div id="step1" class="step bg-white p-6 rounded-lg shadow-md flex items-start w-full max-w-2xl animate__animated animate__fadeInUp">
-                <img src="https://via.placeholder.com/50/1c64f2" alt="User Registration and Login" class="step-icon mr-4">
+                <i class="fas fa-user-plus step-icon mr-4"></i>
                 <div>
                     <h2 class="text-xl font-bold">1. User Registration and Login</h2>
                     <p><strong>Create an Account:</strong> If you don't have an account, you need to sign up by providing some personal information (name, phone number, etc.).</p>
+                    @if (TempData["UserId"] != null)
+                    {
+                    }
+                    else
+                    {
+                        <a href="/Home/SignUp" class="btn-primary mt-2">Sign Up</a>
 
-                    <a href="/Home/SignUp" class="btn-primary mt-2">Sign Up</a>
+                    }
                 </div>
             </div>
 
             <div id="step2" class="step bg-white p-6 rounded-lg shadow-md flex items-start w-full max-w-2xl animate__animated animate__fadeInUp animate__delay-1s">
-                <img src="https://via.placeholder.com/50/6b8af2" alt="Creating an Auction" class="step-icon mr-4">
+                <i class="fas fa-gavel step-icon mr-4"></i>
                 <div>
                     <h2 class="text-xl font-bold">2. Creating an Auction</h2>
                     <p><strong>Submit a Request:</strong> Provide detailed information about the item you want to auction (e.g., car, property).</p>
@@ -261,16 +268,16 @@
             </div>
 
             <div id="step3" class="step bg-white p-6 rounded-lg shadow-md flex items-start w-full max-w-2xl animate__animated animate__fadeInUp animate__delay-2s">
-                <img src="https://via.placeholder.com/50/1c64f2" alt="Participating in Auctions" class="step-icon mr-4">
+                <i class="fas fa-gavel step-icon mr-4"></i>
                 <div>
                     <h2 class="text-xl font-bold">3. Participating in Auctions</h2>
                     <p><strong>Bidding:</strong> You can place bids on active auctions.</p>
-                    <a href="/Users/GetAllCarAuctions" class="btn-primary mt-2">Bid Now</a>
+                    <a href="/Users/GetAllCarsAuctions" class="btn-primary mt-2">Bid Now</a>
                 </div>
             </div>
 
             <div id="step4" class="step bg-white p-6 rounded-lg shadow-md flex items-start w-full max-w-2xl animate__animated animate__fadeInUp animate__delay-3s">
-                <img src="https://via.placeholder.com/50/6b8af2" alt="Fees and Deductions" class="step-icon mr-4">
+                <i class="fas fa-money-bill-wave step-icon mr-4"></i>
                 <div>
                     <h2 class="text-xl font-bold">4. Fees and Deductions</h2>
                     <p><strong>Sellers:</strong> 2% of the final auction amount is deducted.</p>

@@ -12,7 +12,7 @@ using ZadProject.Data;
 namespace ZadProject.Migrations
 {
     [DbContext(typeof(ZadDbContext))]
-    [Migration("20240708101702_init")]
+    [Migration("20240807061422_init")]
     partial class init
     {
         /// <inheritdoc />

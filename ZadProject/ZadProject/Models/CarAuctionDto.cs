@@ -33,7 +33,7 @@ namespace ZadProject.Models
 
         [Display(Name = "Video Link")]
         [Required(ErrorMessage = "this field can not be empty")]
-        public string VideoLink { get; set; }
+        public string? VideoLink { get; set; }
 
         [Display(Name = "Condition")]
         [Required(ErrorMessage = "This field can't be empty")]

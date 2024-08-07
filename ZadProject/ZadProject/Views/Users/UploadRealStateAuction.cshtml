@@ -127,6 +127,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="/Users/UploadAuction" class="dropdown-item">Upload Auctions</a>
+                                <a href="/Users/UserAccount" class="dropdown-item">Payment</a>
                             </div>
                         </div>
                         <a href="/Home/HowItWork" class="nav-item nav-link">H.I.W</a>
@@ -164,8 +165,8 @@
                     <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Select</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-transparent card-hover transition duration-300 cursor-pointer" onclick="location.href='/Users/UploadCarAuction'">
-                    <h2 class="text-2xl font-semibold mb-4">Car</h2>
-                    <p class="mb-4">Auction your car to get the best value.</p>
+                    <h2 class="text-2xl font-semibold mb-4">Vehicles</h2>
+                    <p class="mb-4">Auction your vehicle to get the best value.</p>
                     <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Select</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-transparent card-hover transition duration-300 cursor-pointer" onclick="location.href='/Users/UploadOtherAuction'">
@@ -179,14 +180,21 @@
             <form asp-action="UploadRealStateAuction" enctype="multipart/form-data" id="house-form" class="form-container">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="mb-4">
-                    <label for="house-size" class="block text-sm font-medium text-gray-700">House Size (in square meters)</label>
-                    <input asp-for="HouseSize" min="1" required name="HouseSize" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the house size in square meters" required pattern="\d+" />
-                    <span asp-validation-for="HouseSize" class="text-danger"></span>
+                    <label for="type-property" class="block text-sm font-medium text-gray-700">Type of Property</label>
+                    <select asp-for="TypeOfProperty" required name="TypeOfProperty" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" asp-items="@Html.GetEnumSelectList(typeof(TypeOfProperty))">
+                        <option value="">--select your value--</option>
+                    </select>
+                    <span asp-validation-for="TypeOfProperty" class="text-danger"></span>
                 </div>
                 <div class="mb-4">
                     <label for="house-location" class="block text-sm font-medium text-gray-700">House Location (Address)</label>
                     <input asp-for="HouseAddress" required name="HouseAddress" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the house address" required />
                     <span asp-validation-for="HouseAddress" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="house-size" class="block text-sm font-medium text-gray-700">House Size (in square meters)</label>
+                    <input asp-for="HouseSize" min="1" required name="HouseSize" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the house size in square meters" required pattern="\d+" />
+                    <span asp-validation-for="HouseSize" class="text-danger"></span>
                 </div>
                 <div class="mb-4">
                     <label for="number-rooms" class="block text-sm font-medium text-gray-700">Number of Rooms</label>
@@ -209,13 +217,7 @@
                     </select>
                     <span asp-validation-for="YearOfBuild" class="text-danger"></span>
                 </div>
-                <div class="mb-4">
-                    <label for="type-property" class="block text-sm font-medium text-gray-700">Type of Property</label>
-                    <select asp-for="TypeOfProperty" required name="TypeOfProperty" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" asp-items="@Html.GetEnumSelectList(typeof(TypeOfProperty))">
-                        <option value="">--select your value--</option>
-                    </select>
-                    <span asp-validation-for="TypeOfProperty" class="text-danger"></span>
-                </div>
+                
                 <div class="mb-4">
                     <label for="house-condition" class="block text-sm font-medium text-gray-700">Condition</label>
                     <select asp-for="Condition" required name="Condition" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" asp-items="@Html.GetEnumSelectList(typeof(Condition))">
@@ -233,19 +235,19 @@
 
                 <div class="mb-4">
                     <label for="number-floors" class="block text-sm font-medium text-gray-700">Number of Floors</label>
-                    <input type="number" min="1" required name="NumberOfFloors" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the number of floors" required pattern="\d+">
+                    <input type="number" min="1" required name="NumberOfFloors" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the number of floors" pattern="\d+">
                     <span asp-validation-for="NumberOfFloors" class="text-danger"></span>
                 </div>
 
                 <div class="mb-4">
                     <label for="video-link" class="block text-sm font-medium text-gray-700">Video Link</label>
-                    <input type="text" required name="VideoLink" id="video-link" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the video link">
+                    <input type="text" name="VideoLink" id="video-link" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the own drive video link">
                     <span asp-validation-for="VideoLink" class="text-danger"></span>
                 </div>
 
                 <div class="mb-4">
                     <label for="starting-price" class="block text-sm font-medium text-gray-700">Starting Price</label>
-                    <input type="number" min="1" required id="starting-price" name="StartingPrice" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the starting price" required pattern="\d+" />
+                    <input type="number" min="1" required id="starting-price" name="StartingPrice" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter the starting price" pattern="\d+" />
                     <span asp-validation-for="StartingPrice" class="text-danger"></span>
                 </div>
                 @*  <div class="mb-4">

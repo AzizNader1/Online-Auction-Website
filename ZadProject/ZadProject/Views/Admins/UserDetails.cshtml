@@ -10,7 +10,8 @@
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100 h-96 object-cover rounded-lg" src="/UserImages/@Model.NationalIdImage" alt="First slide">
+                        <img class ="d-block w-100 h-96 object-cover rounded-lg" src="@Url.Content(Model.NationalIdImage.Replace("wwwroot", "~").Replace("\\", "/"))" alt="User Image" />
+
                     </div>
                 </div>
             </div>

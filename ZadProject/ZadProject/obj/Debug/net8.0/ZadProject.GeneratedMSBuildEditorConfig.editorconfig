@@ -17,171 +17,171 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ZadProject
 build_property.RootNamespace = ZadProject
-build_property.ProjectDir = C:\Users\ZeeZo\Desktop\ZadProject\ZadProject\ZadProject\ZadProject\
+build_property.ProjectDir = C:\Users\ZeeZo\Desktop\My Projects\Online-Auction-Website\ZadProject\ZadProject\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ZeeZo\Desktop\ZadProject\ZadProject\ZadProject\ZadProject
+build_property.MSBuildProjectDirectory = C:\Users\ZeeZo\Desktop\My Projects\Online-Auction-Website\ZadProject\ZadProject
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/AcceptedAuctions.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/AcceptedAuctions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEFjY2VwdGVkQXVjdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/CarAuctionDetails.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/CarAuctionDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXENhckF1Y3Rpb25EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/CarAuctionDetailsForChangeStatus.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/CarAuctionDetailsForChangeStatus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXENhckF1Y3Rpb25EZXRhaWxzRm9yQ2hhbmdlU3RhdHVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/CarCompletedAuctionDetails.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/CarCompletedAuctionDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXENhckNvbXBsZXRlZEF1Y3Rpb25EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/CompletedAuctions.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/CompletedAuctions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXENvbXBsZXRlZEF1Y3Rpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/GetAllUsers.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/GetAllUsers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEdldEFsbFVzZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/Index.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/OtherAuctionDetails.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/OtherAuctionDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXE90aGVyQXVjdGlvbkRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/OtherAuctionDetailsForChangeStatus.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/OtherAuctionDetailsForChangeStatus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXE90aGVyQXVjdGlvbkRldGFpbHNGb3JDaGFuZ2VTdGF0dXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/OtherCompletedAuctionDetails.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/OtherCompletedAuctionDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXE90aGVyQ29tcGxldGVkQXVjdGlvbkRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/PendingAuctions.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/PendingAuctions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFBlbmRpbmdBdWN0aW9ucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/RealStateAuctionDetails.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/RealStateAuctionDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFJlYWxTdGF0ZUF1Y3Rpb25EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/RealStateAuctionDetailsForChangeStatus.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/RealStateAuctionDetailsForChangeStatus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFJlYWxTdGF0ZUF1Y3Rpb25EZXRhaWxzRm9yQ2hhbmdlU3RhdHVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/RealStateCompletedAuctionDetails.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/RealStateCompletedAuctionDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFJlYWxTdGF0ZUNvbXBsZXRlZEF1Y3Rpb25EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/RejectedAuctions.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/RejectedAuctions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFJlamVjdGVkQXVjdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/UserDetails.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/UserDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFVzZXJEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Admins/_AdminLayout.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Admins/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Home/AboutUs.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Home/AboutUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Home/HomePage.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Home/HomePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Home/HowItWork.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Home/HowItWork.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb3dJdFdvcmsuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Home/login.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Home/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Home/SignUp.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Home/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Shared/Error.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/CarAuctionDetails.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/CarAuctionDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ2FyQXVjdGlvbkRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/GetAllAuctions.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/GetAllAuctions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcR2V0QWxsQXVjdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/GetAllCarsAuctions.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/GetAllCarsAuctions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcR2V0QWxsQ2Fyc0F1Y3Rpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/GetAllOtherAuctions.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/GetAllOtherAuctions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcR2V0QWxsT3RoZXJBdWN0aW9ucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/GetAllRealStateAuctions.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/GetAllRealStateAuctions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcR2V0QWxsUmVhbFN0YXRlQXVjdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/OtherAuctionDetails.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/OtherAuctionDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcT3RoZXJBdWN0aW9uRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/RealStateAuctionDetails.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/RealStateAuctionDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUmVhbFN0YXRlQXVjdGlvbkRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/UploadAuction.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/UploadAuction.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXBsb2FkQXVjdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/UploadCarAuction.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/UploadCarAuction.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXBsb2FkQ2FyQXVjdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/UploadOtherAuction.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/UploadOtherAuction.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXBsb2FkT3RoZXJBdWN0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/UploadRealStateAuction.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/UploadRealStateAuction.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXBsb2FkUmVhbFN0YXRlQXVjdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/UserAccount.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/UserAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXNlckFjY291bnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Users/UserDashboard.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Users/UserDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXNlckRhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/_ViewImports.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/_ViewStart.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ZeeZo/Desktop/ZadProject/ZadProject/ZadProject/ZadProject/Views/Shared/_Layout.cshtml]
+[C:/Users/ZeeZo/Desktop/My Projects/Online-Auction-Website/ZadProject/ZadProject/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-i4cd8ljx0n

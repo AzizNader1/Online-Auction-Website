@@ -282,6 +282,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 m-0">
                             <a href="/Users/UploadAuction" class="dropdown-item">Upload Auctions</a>
+                            <a href="/Users/UserAccount" class="dropdown-item">Payment</a>
                         </div>
                     </div>
                     <a href="/Home/HowItWork" class="nav-item nav-link">H.I.W</a>
@@ -316,15 +317,17 @@
         <div class="bg-white shadow-md rounded-lg p-6 slide-up">
             <div class="flex">
                 <div class="w-1/3">
-                    <img id="main-image" src="/CarAuctionImages/@Model.CarAuction.AuctionImage" alt="Main Image" class="rounded-lg mb-4 fade-in hover-grow cursor-pointer">
+                    <img id="main-image" src="~/CarsImages/@Model.CarAuction.AuctionImage" alt="Main Image" class="rounded-lg mb-4 fade-in hover-grow cursor-pointer">
                 </div>
                 <div class="w-2/3 pl-6">
-                    <h1 class="text-2xl font-bold mb-2">@Model.CarAuction.StartingPrice</h1>
-                    <p class="text-gray-700 mb-4">@Model.CarAuction.CarModel</p>
-                    <p class="text-xl font-semibold mb-4">Acceptable Bidding Price: <span class="text-blue-500">@TempData["MinimumPriceCar"]</span></p>
+                    <p class="text-2xl font-bold mb-2">Last Price: <span class="text-blue-500">@Model.CarAuction.StartingPrice</span></p>
+                    <h1 class="text-2xl font-bold mb-2">Car Model : @Model.CarAuction.CarModel</h1>
+                    <p class="text-2xl font-bold mb-2">Kilometers : @Model.CarAuction.NOK</p>
                     <div class="timer">
-                        <h1 id="countdown"></h1>
+                        <span class="text-2xl font-bold mb-2">Time Left :</span>
+                        <span class="text-2xl font-bold mb-2 text-blue-500" id="countdown"></span>
                     </div>
+                    <p class="text-2xl font-bold mb-2">Acceptable Bidding Price: <span class="text-blue-500">@TempData["MinimumPriceCar"]</span></p>
                     @if (TempData["BidingResult"] != null)
                     {
                         <div class="alert alert-danger" role="alert">
@@ -341,10 +344,6 @@
                 </div>
             </div>
             <div class="mt-6">
-                <div id="description" class="tab-content active">
-                    <h1 class="text-2xl font-bold mb-2"><i class="fas fa-file-alt"></i> Description:- </h1>
-                    <h2 class="text-xl font-bold mb-2">How can have anything you want in life if you?</h2>
-                    <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                     <div>
                         <h1 class="text-2xl font-bold mb-1"><i class="fas fa-file-alt"></i> Details:- </h1>
                     </div>
@@ -356,17 +355,14 @@
                             <li><i class="fas fa-car-side icon"></i><span>Condition:</span> @Model.CarAuction.Condition</li>
                             <li><i class="fas fa-cogs icon"></i><span>Transmission Type:</span> @Model.CarAuction.TransmisssionType</li>
                             <li><i class="fas fa-palette icon"></i><span>Color:</span> @Model.CarAuction.Colors</li>
-                            <li><i class="fas fa-door-open icon"></i><span>Number of Doors:</span> @Model.CarAuction.NumberOfDoors doors</li>
-                            <li><i class="fas fa-car-crash icon"></i><span>Has the car been in an accident before?:</span> @Model.CarAuction.AccidentBefore</li>
                         </ul>
                         <ul class="details-list">
+                            <li><i class="fas fa-door-open icon"></i><span>Number of Doors:</span> @Model.CarAuction.NumberOfDoors doors</li>
+                            <li><i class="fas fa-car-crash icon"></i><span>Has the car been in an accident before?:</span> @Model.CarAuction.AccidentBefore</li>
                             <li><i class="fas fa-car icon car-icon"></i><span>Tire Condition:</span> @Model.CarAuction.TireCondition </li>
-                            <li><i class="fas fa-clipboard-check icon"></i><span>Recent Technical Inspection:</span> @Model.CarAuction</li>
                             <li><i class="fas fa-user icon"></i><span>Number of Previous Owners:</span> @Model.CarAuction.NumberOfOwner</li>
                             <li><i class="fas fa-shield-alt icon"></i><span>Warranty:</span> @Model.CarAuction.Warranty</li>
                             <li><i class="fas fa-video icon"></i><span>Video Link:</span> <a href="@Model.CarAuction.VideoLink">Video Link</a></li>
-                            <li><i class="fas fa-dollar-sign icon"></i><span>Owner Name:</span> @Model.CarAuction.OwnerName</li>
-                            <li><i class="fas fa-dollar-sign icon"></i><span>Owner Phone:</span> @Model.CarAuction.OwnerPhone</li>
                         </ul>
                     </div>
                 </div>

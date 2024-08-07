@@ -7878,11 +7878,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject.csproj",
+      "projectUniqueName": "C:\\Users\\ZeeZo\\Desktop\\My Projects\\Online-Auction-Website\\ZadProject\\ZadProject\\ZadProject.csproj",
       "projectName": "ZadProject",
-      "projectPath": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\ZadProject.csproj",
+      "projectPath": "C:\\Users\\ZeeZo\\Desktop\\My Projects\\Online-Auction-Website\\ZadProject\\ZadProject\\ZadProject.csproj",
       "packagesPath": "C:\\Users\\ZeeZo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZeeZo\\Desktop\\ZadProject\\ZadProject\\ZadProject\\ZadProject\\obj\\",
+      "outputPath": "C:\\Users\\ZeeZo\\Desktop\\My Projects\\Online-Auction-Website\\ZadProject\\ZadProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -63,7 +63,6 @@ namespace ZadProject.Controllers
 
             return View(AllRejectedAuction);
         }
-
         [HttpGet]
         public IActionResult CompletedAuctions()
         {

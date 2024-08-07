@@ -43,7 +43,96 @@
             margin-bottom: 20px;
             border-top: 3px solid #010912;
             border-bottom: 3px solid #010912;
+
         }
+        .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container > .card-item {
+    flex: 1 1 400px;
+    max-width: 400px;
+    height: auto;
+}
+
+.card-container:only-child > .card-item,
+.card-container > .card-item:nth-last-child(2):first-child,
+.card-container > .card-item:nth-last-child(1):first-child {
+    width: 400px;
+    height: auto;
+}
+
+.card-item {
+    background-color: #ffffff;
+    border: 1px solid #0d6efd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.card-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.card-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color:#0d6efd;
+}
+
+.card-item img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card-item p, .card-item h2{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333333;
+}
+
+.card-item .btn {
+    color: #ffffff;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.card-item .btn:hover {
+    color: #ffffff;
+}
+
+media (max-width: 992px) {
+    .card-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+media (max-width: 576px) {
+    .card-item {
+        flex: 1 1 100%;
+    }
+}
     </style>
 </head>
 
@@ -61,7 +150,7 @@
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
                 <a href="/Home/HomePage" class="navbar-brand d-flex align-items-center text-center">
                     <div>
-                        <img class="img-fluid" src="/img/pngwing.com.png" alt="" style="width: 70px; height: 70px;">
+                        <img class="img-fluid" src="/img/asd.png" alt="" style="width: 70px; height: 70px;">
                     </div>
                     <pre> </pre>
 
@@ -83,9 +172,10 @@
                         </div>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="/Users/UploadAuction" class="dropdown-item">Upload Auctions</a>
-                            </div>
+                           <div class="dropdown-menu rounded-0 m-0">
+                            <a href="/Users/UploadAuction" class="dropdown-item">Upload Auctions</a>
+                            <a href="/Users/UserAccount" class="dropdown-item">Payment</a>
+                        </div>
                         </div>
                         <a href="/Home/HowItWork" class="nav-item nav-link">H.I.W</a>
 
@@ -158,13 +248,12 @@
 <pre>
 
 </pre>
-        <!-- Category Start -->
+       @*  <!-- Category Start -->
         <div class="gogo">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">Auction Types</h1>
-                    <p>"ZAD Auction offers three main auction categories: Cars in vehicles, perfect properties in Real Estate, 
-                        and unique treasures and antueqs in Miscellaneous. Join ZAD today and start bidding with confidence!"</p>
+                    <p>"Experience the excitement of online bidding with our comprehensive auctions, offering a vast selection of cars, an array of real estate properties, and a diverse range of unique items to suit every interest and need!"</p>
                 </div>
                 <div class="row g-4">
                     <div class="gogo" data-wow-delay="0.5s">
@@ -209,7 +298,7 @@
     </div>
     </div>
     </div>
-    <!-- Category End -->
+    <!-- Category End --> *@
 <pre>
 
 </pre>
@@ -233,34 +322,61 @@
             <div class="tab-content">
                 <div id="tab-1" class="tab-pane fade show p-0 active">
                     <div class="row g-4">
-                        @if (Model.AcceptedRealStateAuctions.Count() == 0)
+                        @if (Model.AcceptedRealStateAuctions.Count() == 0 && Model.AcceptedCarAuctions.Count() == 0 && Model.AcceptedOtherAuctions.Count() == 0)
                         {
                             <h4 style="display:flex;justify-content:center;align-items:center;color:dodgerblue;font-size:25px">there is no auctions avalible here</h4>
                         }
                         else
                         {
+                            <div class="card-container">
                             @foreach (var item in Model.AcceptedRealStateAuctions)
                             {
-                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                    <div class="property-item rounded overflow-hidden">
-                                        <div class="position-relative overflow-hidden">
-                                            <a href="/Users/RealStateAuctionDetails/@item.RealStateAuctionId"><img class="img-fluid" src="/RealStateAuctionImages/@item.AuctionImage" alt=""></a>
-                                            <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                            <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
-                                        </div>
-                                        <div class="p-4 pb-0">
-                                            <h5 class="text-primary mb-3">$@item.MinimunSalePrice</h5>
-                                            <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                            <p><i class="fa fa-map-marker-alt text-primary me-2"></i>@item.HouseAddress</p>
-                                        </div>
-                                        <div class="d-flex border-top">
-                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>@item.NumberOfRooms Room</small>
-                                            <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>@item.NumberOfBathrooms Bath</small>
-                                        </div>
-                                    </div>
+                                <div class="card-item">
+                            <div class="property-item rounded overflow-hidden">
+                                <div class="position-relative overflow-hidden">
+                                    <a href="#"><img class="img-fluid" src="~/HousesImages/@item.AuctionImage" alt="Auction Image"></a>
+                                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Auction</div>
                                 </div>
+                                <div class="p-4 pb-0 card-content">
+                                    <p>Type: @item.TypeOfProperty</p>
+                                    <p>Size: @item.HouseSize</p>
+                                    <p>Address: @item.HouseAddress</p>
+                                    <h2 class="text-primary mb-3">Starting Price: $@item.MinimunSalePrice</h2>
+                                </div>
+                                <div class="d-flex border-top border-bottom">
+                                    <small class="flex-fill text-center border-end py-2"><i class="fas fa-bath text-primary me-2"></i>@item.NumberOfBathrooms Bathrooms</small>
+                                    <small class="flex-fill text-center border-end py-2"><i class="fas fa-bed text-primary me-2"></i>@item.NumberOfRooms Rooms</small>
+                                    <small class="flex-fill text-center py-2"><i class="fas fa-building text-primary me-2"></i>@item.NumberOfFloors Floors</small>
+                                </div>
+                                <a href="/Users/RealStateAuctionDetails/@item.RealStateAuctionId" class="btn btn-primary">More Details</a>
+                            </div>
+                        </div>
                             }
+
+                             @foreach (var item in Model.AcceptedCarAuctions)
+                            {
+                                <div class="card-item">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                    <a href="#"><img class="img-fluid" src="~/CarsImages/@item.AuctionImage" alt="Auction Image"></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Auction</div>
+                            </div>
+                            <div class="p-4 pb-0 card-content">
+                                    <p >Car Model: @item.CarModel</p>
+                                    <p >Kilometers: @item.NOK</p>
+                                    <p >Color: @item.Colors</p>
+                                <h2 class="text-primary mb-3">Starting Price: $@item.MinimunSalePrice</h2>
+                            </div>
+                            <div class="d-flex border-top border-bottom">
+                                <small class="flex-fill text-center border-end py-2"><i class="fas fa-road text-primary me-2"></i>@item.NOK km</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fas fa-car text-primary me-2"></i>@item.NumberOfDoors Room</small>
+                                <small class="flex-fill text-center py-2"><i class="fas fa-calendar-alt text-primary me-2"></i>@item.YearOfManufacture</small>
+                            </div>
+                            <a href="/Users/CarAuctionDetails/@item.CarAuctionId" class="btn btn-primary">More Details</a>
+                        </div>
+                    </div>
+                            }
+                                </div>
                         }
                     </div>
                 </div>
@@ -272,20 +388,21 @@
                     <div class="row g-5 align-items-center">
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                                <img class="img-fluid w-100" src="/img/mon.jpg">
+                                <img class="img-fluid w-100" src="/WhatsApp Image 2024-07-12 at 20.26.50_2ac661e1.jpg">
                             </div>
                         </div>
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                             <i class="fas fa-bullhorn"></i>
-                            <h1 class="mb-4">Find The Best For You Through Auction</h1>
-                            <h2 class="mb-4">For Sale: Jeep Wrangler 2020</h2
-                            <p class="mb-4">This car has a special offer for two days, which is to start the auction at a low price</p>
+                            
+                            <h2 class="mb-4">For Sale: Jeep Wrangler 2020 </h2
+                           
                             <p><i class="fa fa-check text-primary me-3"></i>Year: 2020</p>
                             <p><i class="fa fa-check text-primary me-3"></i>Mileage: 15,000 km</p>
                             <p><i class="fa fa-check text-primary me-3"></i>Fuel Type: Gasoline</p>
                             <p><i class="fa fa-check text-primary me-3"></i>Transmission: Automatic</p>
-
-                            <a class="btn btn-primary py-3 px-5 mt-3" href="">Auction Now</a>
+                            <p><i class="fa fa-check text-primary me-3"></i>Price: 800,000</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>Owner Name: Joseph Nabil</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>Owner Phone: 01212239386</p>
                         </div>
                     </div>
                 </div>
@@ -298,7 +415,7 @@
                         <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
                             <div class="row g-5 align-items-center">
                                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                                    <img class="img-fluid rounded w-100" src="/img/call-to-action.jpg" alt="">
+                                    <img class="img-fluid rounded w-100" src="/img/us.jpg" alt="">
                                 </div>
                                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                                     <div class="mb-4">
@@ -458,6 +575,19 @@
 
         <!-- Template Javascript -->
         <script src="/js/main.js"></script>
+        <script>
+             document.addEventListener("DOMContentLoaded", function () {
+            const cardItems = document.querySelectorAll(".card-item");
+            cardItems.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add("visible");
+                }, index * 200);
+            });
+        });
+
+
+        </script>
+        
 </body>
 
 </html>

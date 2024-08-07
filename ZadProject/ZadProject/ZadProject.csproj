@@ -23,9 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\RealStateAuctionImages\" />
-    <Folder Include="wwwroot\OtherAuctionImages\" />
-    <Folder Include="wwwroot\UserImages\" />
+    <Folder Include="wwwroot\CarsImages\" />
   </ItemGroup>
 
 </Project>
